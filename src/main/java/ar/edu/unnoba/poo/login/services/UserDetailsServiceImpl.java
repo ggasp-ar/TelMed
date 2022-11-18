@@ -29,9 +29,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     		List grantedAuthorities = new ArrayList();
     		GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(u.getRole());
     		grantedAuthorities.add(grantedAuthority);
-    	     
-    		//UserDetails user = (UserDetails) new User(u.getUsername(), u.getPassword(), grantedAuthorities);
-    		
     		UserLoggedIn user = new UserLoggedIn(u.getEmail(), u.getPassword(), grantedAuthorities, u);
 
 			if (!user.isEnabled()){

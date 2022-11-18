@@ -10,8 +10,9 @@
             <div><label> Contraseña: <input type="password" name="password"/> </label></div>
             <div><input type="submit" value="Ingresar"/></div>
         </form>
-        <div><input type="button" value="Registrarse"/></div>
-
+        <form th:action="@{/signup}"method="GET">
+            <button type="sumbit" class="btn btn-primary mt-3">Registrarse </button>
+        </form>
         <div th:if="${param.error}">
             Usuario / Contraseña incorrecta o Usuario Deshabilitado
         </div>

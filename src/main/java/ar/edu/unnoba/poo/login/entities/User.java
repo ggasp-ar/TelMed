@@ -1,5 +1,7 @@
 package ar.edu.unnoba.poo.login.entities;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,8 @@ public class User {
 	private String role;
 	@Column(name="nombre")
 	private String name;
+	@Column(name="bloqueado")
+	private Boolean enabled;
 
 	public Boolean getEnabled() {
 		return !enabled;
@@ -26,8 +30,6 @@ public class User {
 		this.enabled = !enabled;
 	}
 
-	@Column(name="bloqueado")
-	private Boolean enabled;
 		
 	public long getId() {
 		return id;
@@ -52,7 +54,8 @@ public class User {
 		return password;
 	}
 	public void setPassword(String password) {
-		this.password = password;
+		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(4);
+		this.password = bCryptPasswordEncoder.encode(password);
 	}
 	public String getName() {
 		return name;
