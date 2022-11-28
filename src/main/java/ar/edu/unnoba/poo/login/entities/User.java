@@ -1,7 +1,5 @@
 package ar.edu.unnoba.poo.login.entities;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +9,6 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-
 	private long dni;
 	private String email;
 	@Column(name="contrasenia")
@@ -22,14 +19,6 @@ public class User {
 	private String name;
 	@Column(name="bloqueado")
 	private Boolean enabled;
-
-	public Boolean getEnabled() {
-		return !enabled;
-	}
-	public void setEnabled(Boolean enabled) {
-		this.enabled = !enabled;
-	}
-
 		
 	public long getId() {
 		return id;
@@ -37,12 +26,11 @@ public class User {
 	public void setId(long id) {
 		this.id = id;
 	}
-
-	public String getRole() {
-		return role;
+	public long getDni() {
+		return dni;
 	}
-	public void setRole(String role) {
-		this.role = role;
+	public void setDni(long dni) {
+		this.dni = dni;
 	}
 	public String getEmail() {
 		return email;
@@ -54,8 +42,13 @@ public class User {
 		return password;
 	}
 	public void setPassword(String password) {
-		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(4);
-		this.password = bCryptPasswordEncoder.encode(password);
+		this.password = password;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public String getName() {
 		return name;
@@ -63,6 +56,10 @@ public class User {
 	public void setName(String firstName) {
 		this.name = firstName;
 	}
-
-		
+	public Boolean getEnabled() {
+		return !enabled;
+	}
+	public void setEnabled(Boolean enabled) {
+		this.enabled = !enabled;
+	}	
 }
