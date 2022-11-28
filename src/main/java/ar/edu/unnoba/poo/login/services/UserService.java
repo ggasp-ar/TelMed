@@ -3,6 +3,8 @@ package ar.edu.unnoba.poo.login.services;
 import java.util.List;
 
 import ar.edu.unnoba.poo.login.repositories.UserRepository;
+import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.stereotype.Service;
@@ -16,12 +18,18 @@ public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private EncriptadorInterface encriptador;
 
 	public List<User> retrieveAllUsers() {
 		return userRepository.findAll();
 	}
 	
 	public void addUser(User user) {
+		user.setEnabled(true);
+		user.setRole("USER");
+		user.setPassword(encriptador.passwordEncrypt(user.getPassword()));
 	    userRepository.save(user);
 	}
 	

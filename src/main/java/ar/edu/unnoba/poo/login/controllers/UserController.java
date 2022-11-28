@@ -1,10 +1,10 @@
 package ar.edu.unnoba.poo.login.controllers;
 
-import java.util.List;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,25 +15,29 @@ import ar.edu.unnoba.poo.login.services.UserService;
 
 import ar.edu.unnoba.poo.login.entities.User;
 
-@RestController
-public class UserControl {
+@Controller
+public class UserController {
 
 	@Autowired
 	private UserService userService;
 	
 	@GetMapping("/users")
-	public List<User> retrieveAllUsers() {
-		return userService.retrieveAllUsers();
+	public String retrieveAllUsers(Model model) {
+		model.addAttribute("users", userService.retrieveAllUsers());
+		return "userlist";
 	}
 	
 	@PostMapping("/users")
-	public void addUser(@RequestBody User user) {
+	public String addUser(@Valid User user, Model model) {
 		userService.addUser(user);
+		model.addAttribute("users", userService.retrieveAllUsers());
+		return "userlist";
 	}
 	
 	@GetMapping("/users/{id}")
-	public User getUser(@PathVariable Long id) {
-	    return userService.getUser(id);
+	public String getUser(@PathVariable Long id, Model model) {
+	   model.addAttribute("user", userService.getUser(id));
+	   return "userlist";
 	}
 	
 	@PutMapping("/users/{id}")
@@ -42,7 +46,9 @@ public class UserControl {
 	}
 
 	@DeleteMapping("/users/{id}")
-	void deleteUser(@PathVariable Long id) {
+	public String deleteUser(@PathVariable Long id, Model model) {
 		  userService.deleteUser(id);
+		  model.addAttribute("users", userService.retrieveAllUsers());
+		  return "userlist";
 	  }
 }
