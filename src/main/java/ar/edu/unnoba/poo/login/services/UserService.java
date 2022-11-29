@@ -42,7 +42,7 @@ public class UserService {
 	    return userRepository.findById(id)
 	      .map(u -> {
 	        u.setEmail(user.getEmail());
-	        u.setPassword(user.getPassword());
+	        u.setPassword(encriptador.passwordEncrypt(user.getPassword()));
 	        u.setName(user.getName());
 	        return userRepository.save(u);
 	      })

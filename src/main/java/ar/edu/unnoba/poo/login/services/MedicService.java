@@ -34,7 +34,7 @@ public class MedicService {
 		return medicRepository.findById(id)
 			      .map(m -> {
 			        m.setLicenseNumber(medic.getLicenseNumber());
-			        m.setSpecialty(medic.getSpecialty());
+			        m.setSpeciality(medic.getSpeciality());
 			        return medicRepository.save(m);
 			      })
 			      .orElseGet(() -> {
