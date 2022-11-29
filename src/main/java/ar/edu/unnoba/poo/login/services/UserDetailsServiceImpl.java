@@ -24,7 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
  
     	try { 
-    		ar.edu.unnoba.poo.login.entities.User u = userService.findUserByUsername(username);
+    		ar.edu.unnoba.poo.login.entities.User u = userService.findUserByEmail(username);
     		
     		List grantedAuthorities = new ArrayList();
     		GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(u.getRole());
@@ -32,16 +32,15 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     		UserLoggedIn user = new UserLoggedIn(u.getEmail(), u.getPassword(), grantedAuthorities, u);
 
 			if (!user.isEnabled()){
-				throw new Exception("Usuario Deshabilitado");
+				throw new Exception("Usuario deshabilitado.");
 			}
 
     		return user;
     	}	
     	catch(NoSuchElementException e) {
-    		throw new UsernameNotFoundException("User no found!");
+    		throw new UsernameNotFoundException("Usuario no encontrado.");
     	}catch(Exception e){
 			throw new UsernameNotFoundException(e.getMessage());
 		}
-   
     }
 }
