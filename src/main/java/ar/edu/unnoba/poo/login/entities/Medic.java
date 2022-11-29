@@ -1,11 +1,12 @@
 package ar.edu.unnoba.poo.login.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MapsId;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -13,9 +14,10 @@ import javax.persistence.Table;
 @Table(name="medicos")
 public class Medic {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	@OneToOne @MapsId
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="usuarios_id", referencedColumnName="id")
 	private User user;
 	@Column(name="matricula")
 	private Long licenseNumber;
@@ -57,11 +59,11 @@ public class Medic {
 		this.licenseNumber = licenseNumber;
 	}
 
-	public String getSpecialty() {
+	public String getSpeciality() {
 		return speciality;
 	}
 
-	public void setSpecialty(String specialty) {
-		this.speciality = specialty;
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
 	}
 }

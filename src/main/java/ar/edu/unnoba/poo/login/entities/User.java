@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name= "usuarios")
 public class User {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String email;
 	@Column(name="contrasenia")
@@ -17,6 +17,10 @@ public class User {
 	private String name;
 	@Column(name="bloqueado")
 	private Boolean enabled;
+	@OneToOne(mappedBy="user")
+	private Medic medic;
+	@OneToOne(mappedBy="user")
+	private Patient patient;
 	
 	public User() {
 		super();
