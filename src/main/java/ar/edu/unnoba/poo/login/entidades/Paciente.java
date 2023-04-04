@@ -1,6 +1,7 @@
-package ar.edu.unnoba.poo.login.entities;
+package ar.edu.unnoba.poo.login.entidades;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,46 +12,47 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="pacientes")
-public class Patient {
+public class Paciente {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="usuarios_id", referencedColumnName="id")
-	private User user;
-	private long dni;
+	private Usuario usuario;
+	@Column(nullable=false, unique=true)
+	private Long dni;
 	
-	public Patient() {
+	public Paciente() {
 		super();
 	}
 	
-	public Patient(User user, Long dni) {
+	public Paciente(Usuario usuario, Long dni) {
 		super();
-		this.user = user;
+		this.usuario = usuario;
 		this.dni = dni;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public User getUser() {
-		return user;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
-	public long getDni() {
+	public Long getDni() {
 		return dni;
 	}
 
-	public void setDni(long dni) {
+	public void setDni(Long dni) {
 		this.dni = dni;
 	}
 }

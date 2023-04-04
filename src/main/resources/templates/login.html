@@ -11,13 +11,11 @@
         <form th:action="@{/login}" method="POST">
             <div><label> Email: <input type="text" name="username"/> </label></div>
             <div><label> Contraseña: <input type="password" name="password"/> </label></div>
-            <div><input type="submit" value="Ingresar"/></div>
+            <div><input class="btn btn-primary mt-3" type="submit" value="Ingresar"/></div>
         </form>
-        <form th:action="@{/signup}"method="GET">
-            <button type="sumbit" class="btn btn-primary mt-3">Registrarse </button>
-        </form>
+        <a class="btn btn-secondary mt-3" th:href="@{/registro}" href="registro.html">Registro</a>
         <div th:if="${param.error}" class="alert alert-danger">
-            Usuario / Contraseña incorrecta o Usuario Deshabilitado
+            Usuario / Contraseña incorrecta o Usuario Bloqueado
         </div>
         <div th:if="${param.logout}" class="alert alert-danger">
             Cerraste Sesion.

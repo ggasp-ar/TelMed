@@ -1,4 +1,4 @@
-package ar.edu.unnoba.poo.login.services;
+package ar.edu.unnoba.poo.login.servicios;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,32 +10,33 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
-import ar.edu.unnoba.poo.login.userDetails.UserLoggedIn;
+
+import ar.edu.unnoba.poo.login.detallesUsuario.UsuarioLogueado;
 
 import java.util.NoSuchElementException;
 
 @Component
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class ServicioDetallesUsaurioImpl implements UserDetailsService {
 
 	@Autowired
-	private UserService userService;
+	private ServicioUsuario servicioUsuario;
 	
 	@Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
  
     	try { 
-    		ar.edu.unnoba.poo.login.entities.User u = userService.findUserByEmail(username);
+    		ar.edu.unnoba.poo.login.entidades.Usuario u = servicioUsuario.obtenerPorEmail(email);
     		
     		List grantedAuthorities = new ArrayList();
-    		GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(u.getRole());
+    		GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(u.getRol());
     		grantedAuthorities.add(grantedAuthority);
-    		UserLoggedIn user = new UserLoggedIn(u.getEmail(), u.getPassword(), grantedAuthorities, u);
+    		UsuarioLogueado usuario = new UsuarioLogueado(u.getEmail(), u.getContrasenia(), grantedAuthorities, u);
 
-			if (!user.isEnabled()){
-				throw new Exception("Usuario deshabilitado.");
+			if (!usuario.isEnabled()){
+				throw new Exception("Usuario bloqueado.");
 			}
 
-    		return user;
+    		return usuario;
     	}	
     	catch(NoSuchElementException e) {
     		throw new UsernameNotFoundException("Usuario no encontrado.");

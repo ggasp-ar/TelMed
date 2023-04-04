@@ -1,4 +1,4 @@
-package ar.edu.unnoba.poo.login.entities;
+package ar.edu.unnoba.poo.login.entidades;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,27 +12,27 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="medicos")
-public class Medic {
+public class Medico {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="usuarios_id", referencedColumnName="id")
-	private User user;
+	private Usuario usuario;
 	@Column(name="matricula")
-	private Long licenseNumber;
+	private Long matricula;
 	@Column(name="especialidad")
-	private String speciality;
+	private String especialidad;
 	
-	public Medic() {
+	public Medico() {
 		super();
 	}
 	
-	public Medic(User user, Long licenseNumber, String speciality) {
+	public Medico(Usuario usuario, Long matricula, String especialidad) {
 		super();
-		this.user = user;
-		this.licenseNumber = licenseNumber;
-		this.speciality = speciality;
+		this.usuario = usuario;
+		this.matricula = matricula;
+		this.especialidad = especialidad;
 	}
 
 	public Long getId() {
@@ -43,27 +43,27 @@ public class Medic {
 		this.id = id;
 	}
 
-	public User getUser() {
-		return user;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
-	public Long getLicenseNumber() {
-		return licenseNumber;
+	public Long getMatricula() {
+		return matricula;
 	}
 
-	public void setLicenseNumber(Long licenseNumber) {
-		this.licenseNumber = licenseNumber;
+	public void setMatricula(Long matricula) {
+		this.matricula = matricula;
 	}
 
-	public String getSpeciality() {
-		return speciality;
+	public String getEspecialidad() {
+		return especialidad;
 	}
 
-	public void setSpeciality(String speciality) {
-		this.speciality = speciality;
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
 	}
 }
