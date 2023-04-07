@@ -45,7 +45,7 @@ public class HomeController {
 	public String register(@Valid User user, Model model) {
 		userService.addUser(user);
 		model.addAttribute("message", "Usuario registrado correctamente");
-		return "home";
+		return "login";
 	}
 
 }
