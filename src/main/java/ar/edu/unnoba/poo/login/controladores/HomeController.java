@@ -24,7 +24,7 @@ public class HomeController {
 	@Autowired
 	private ServicioPaciente servicioPaciente;
 
-	@GetMapping("/")
+	@GetMapping({"/","/home"})
 	public String index() {
 		return "home";
 	}
@@ -50,7 +50,7 @@ public class HomeController {
 	public String registro(@Valid Usuario usuario, @Valid Paciente paciente, Model model) {
 		Usuario nuevoUsuario = servicioUsuario.nuevo(usuario, Roles.ROLE_USER);
 		paciente.setUsuario(nuevoUsuario);
-		servicioPaciente.nuevo(paciente);
+		//servicioPaciente.nuevo(paciente); ANULADO DEBIDO A QUE NO TENEMOS PARA INGRESAR DNI EN EL REGISTRO
 		model.addAttribute("message", "Usuario registrado correctamente.");
 		return "login";
 	}
