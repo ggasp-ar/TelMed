@@ -1,9 +1,7 @@
 package ar.edu.unnoba.poo.login;
 
-import ar.edu.unnoba.poo.login.entidades.Especialidad;
-import ar.edu.unnoba.poo.login.entidades.Medico;
-import ar.edu.unnoba.poo.login.entidades.Paciente;
-import ar.edu.unnoba.poo.login.entidades.Usuario;
+import ar.edu.unnoba.poo.login.entidades.*;
+import ar.edu.unnoba.poo.login.servicios.ServicioEspecialidad;
 import ar.edu.unnoba.poo.login.servicios.ServicioMedico;
 import ar.edu.unnoba.poo.login.servicios.ServicioPaciente;
 import ar.edu.unnoba.poo.login.servicios.ServicioUsuario;
@@ -13,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 @Controller
 public class TestController {
@@ -24,6 +22,8 @@ public class TestController {
     ServicioPaciente pacsvc;
     @Autowired
     ServicioMedico medsvc;
+    @Autowired
+    ServicioEspecialidad espsvc;
 
     @GetMapping("/usertest")
     private String regTest() {
@@ -35,28 +35,44 @@ public class TestController {
         usr.setContrasenia("123");
         usrsvc.nuevo(usr, Rol.ROLE_ADMIN);
 
+        usr = new Usuario();
+        usr.setEmail("admin2@telmed.com");
+        usr.setContrasenia("123");
+        usrsvc.nuevo(usr, Rol.ROLE_ADMIN);
+
         //"usr: usuario1@telmed.com pwd: 123"
-        Paciente pac = new Paciente();
         usr = new Usuario();
         usr.setEmail("usuario1@telmed.com");
         usr.setContrasenia("123");
-        usrsvc.nuevo(usr, Rol.ROLE_USER);
+        Paciente pac = new Paciente();
         pac.setUsuario(usr);
         pac.setDni("28349032");
         pac.setNombre("Kun Aguero");
+        pac.setTurnos(new ArrayList<>());
         pacsvc.nuevo(pac);
 
         //"usr: usuario1@telmed.com pwd: 123"
-        Medico med = new Medico();
+
+
+        Especialidad e = new Especialidad();
+        e.setNombre("Testesp");
+        e.setObservaciones("none");
+
+        espsvc.nueva(e);
+
+        ArrayList<Especialidad> esps = new ArrayList<>();
+        esps.add(e);
+
         usr = new Usuario();
         usr.setEmail("medico1@telmed.com");
         usr.setContrasenia("123");
-        usrsvc.nuevo(usr, Rol.ROLE_MEDIC);
+        Medico med = new Medico();
         med.setUsuario(usr);
         med.setNombre("Demian Frasnedo");
         med.setDni("12345678");
-        med.setEspecialidades(new ArrayList<Especialidad>());
+        med.setEspecialidades(esps);
         med.setMatricula((long)123182301);
+        med.setAgenda(new Agenda());
         medsvc.nuevo(med);
 
         System.out.println("usr: admin@telmed.com       pwd: 123");
