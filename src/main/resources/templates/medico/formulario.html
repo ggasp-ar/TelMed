@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="https://www.thymeleaf.org">
     <head>
     	<meta charset="utf-8">
         <title>Nuevo Médico</title>
@@ -12,18 +12,35 @@
         <div th:if="${message}" class="alert alert-success">
         	<span th:text="${message}"></span>
         </div>
-        <form action="#" th:action="${#httpServletRequest.requestURI} == '/medico/nuevo'? @{/medico} : @{/medico/{id}(id=${medico.id})}" th:method="${#httpServletRequest.requestURI} == '/medico/nuevo'? POST : PUT">
-            <label>Nombre</label>
-            <input type="text" th:field="*{usuario.nombre}" th:value="*{usuario.nombre}"/>
+        <form action="#" th:action="${#httpServletRequest.requestURI} == '/medico/nuevo'? @{/medico} : @{/medico/{id}(id=${medico.id})}" th:method="${#httpServletRequest.requestURI} == '/medico/nuevo'? POST : PUT" th:object="${medico}">
+            <label>Nombre y Apellido</label>
+            <input type="text" th:field="*{nombre}" th:value="*{nombre}"/>
+
+            <label>DNI</label>
+            <input type="text" th:field="*{dni}" th:value="*{dni}"/>
+            <!--
+            <label>Fecha de Nacimiento</label>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" th:field="*{fechaNacimiento}" placeholder="Fecha de Nacimiento">
+
+            <label>Teléfono</label>
+            <input type="text" th:field="*{telefono}" th:value="*{telefono}"/>
+            -->
             <label>Matrícula</label>
-            <input type="number" th:field="*{medico.matricula}" th:value="*{medico.matricula}"/>
-            <label>Especialidad:</label>
-            <input type="text" th:field="*{medico.especialidad}" th:value="*{medico.especialidad}"/>
+            <input type="text" th:field="*{matricula}" th:value="*{matricula}"/>
+
+            <label>Especialidades</label>
+            <select th:field="*{especialidades}">
+                <option th:each="especialidad : ${#httpServletRequest.requestURI} == '/medico/nuevo'? ${especialidades} : *{especialidades}" th:value="${especialidad.id}" th:text="${especialidad.nombre}"></option>
+            </select>
+
             <label>Email:</label>
             <input type="email" th:field="*{usuario.email}" th:value="*{usuario.email}"/>
+
             <label>Contraseña:</label>
             <input type="password" th:field="*{usuario.contrasenia}" th:value="*{usuario.contrasenia}"/>
+
             <hr>
+            
             <button class="btn btn-primary" type="submit">Confirmar</button>
         </form>
     </body>

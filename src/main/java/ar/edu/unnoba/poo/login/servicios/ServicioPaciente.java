@@ -8,17 +8,25 @@ import org.springframework.stereotype.Service;
 
 import ar.edu.unnoba.poo.login.entidades.Paciente;
 import ar.edu.unnoba.poo.login.repositorios.RepositorioPaciente;
+import ar.edu.unnoba.poo.login.util.Rol;
+import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;
 
 @Service
 public class ServicioPaciente {
 	@Autowired
 	private RepositorioPaciente repositorioPaciente;
 	
+	@Autowired
+	private EncriptadorInterface encriptador;
+	
 	public List<Paciente> obtenerTodos() {
 		return repositorioPaciente.findAll();
 	}
 	
 	public Paciente nuevo(Paciente paciente) {
+		paciente.getUsuario().setContrasenia(encriptador.passwordEncrypt(paciente.getUsuario().getContrasenia()));
+		paciente.getUsuario().setRol(Rol.ROLE_USER);
+		paciente.getUsuario().setBloqueado(true);
 		return repositorioPaciente.save(paciente);
 	}
 	

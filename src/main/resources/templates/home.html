@@ -97,9 +97,9 @@
 			  <p>Póngase en contacto con un profesional de la salud certificado desde la comodidad de su casa</p>
 		  </section>
         
-      <div class="row">
+      <div sec:authorize="not isAuthenticated()" class="row">
 	        <div class="col-md-6 mb-4">
-		        <form th:action="@{/registro}"method="GET">
+		        <form th:action="@{/registro}" method="GET">
 		            <button type="submit" class="btn btn-block btn-lg">
 		                REGISTRARSE
 		            </button>
@@ -114,7 +114,6 @@
 	        </div>
 	      </div>
       </div>
-
 
       <div class="col-lg-8 mb-5 mb-lg-0 position-relative">
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>

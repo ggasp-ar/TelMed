@@ -3,26 +3,30 @@ package ar.edu.unnoba.poo.login.entidades;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
+import ar.edu.unnoba.poo.login.util.Rol;
+
 @Entity
 @Table(name= "usuarios")
 public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(name="email", nullable=false, unique=true)
 	@Email
 	private String email;
 	@Column(name="contrasenia")
 	private String contrasenia;
+	// Cambio el tipo de rol de String al Enum Roles
 	@Column(name="rol")
-	private String rol;
-	@Column(name="nombre")
-	private String nombre;
+	private Rol rol;
+//	@Column(name="nombre")
+//	private String nombre;
 	@Column(name="bloqueado")
 	private Boolean bloqueado;
-	@OneToOne(mappedBy="usuario")
-	private Medico medico;
-	@OneToOne(mappedBy="usuario")
-	private Paciente paciente;
+//	@OneToOne(mappedBy="usuario")
+//	private Medico medico;
+//	@OneToOne(mappedBy="usuario")
+//	private Paciente paciente;
 	
 	public Usuario() {
 		super();
@@ -52,21 +56,21 @@ public class Usuario {
 		this.contrasenia = contrasenia;
 	}
 	
-	public String getRol() {
+	public Rol getRol() {
 		return rol;
 	}
 	
-	public void setRol(String rol) {
+	public void setRol(Rol rol) {
 		this.rol = rol;
 	}
 	
-	public String getNombre() {
-		return nombre;
-	}
-	
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+//	public String getNombre() {
+//		return nombre;
+//	}
+//	
+//	public void setNombre(String nombre) {
+//		this.nombre = nombre;
+//	}
 	
 	public Boolean getBloqueado() {
 		return !bloqueado;
