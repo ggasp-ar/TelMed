@@ -336,15 +336,19 @@ input {
     padding-bottom: 4px;
     border-bottom: 1px solid #5FD1C1;
 }
-.form-wrap a.forgot {
-    color: #ccc;
-    margin: 1em 0 0 -1em;
-    padding-bottom: 4px;
-    font-size: 13px;
-    border-bottom: 1px solid #5FD1C1;
+.forgot{
+/*     color: #ccc; */
+/*     margin: 1em 0 0 -1em; */
+/*     padding-bottom: 4px; */
+/*     font-size: 13px; */
+/*     border-bottom: 1px solid #5FD1C1; */
+    margin: 0em 0em 0 1.03em;
+	background: none;
+    border: none;
 }
 .form-wrap a:hover {
     color: #fff;
+    text-decoration: none;
 }
 .form-wrap .tabs {
     overflow: hidden;
@@ -501,6 +505,7 @@ input {
 .fa {
     display: none;
 }
+
 /* MEDIUM VIEWPORT */
 @media only screen and (min-width: 40em) {
 
@@ -608,8 +613,8 @@ input {
     /* ARROW */
     .tabs-content .fa {
         position: absolute;
-        top: 8px;
-        left: -16px;
+        top: 13px;
+    	left: 28px;
         display: block;
         font-size: .8em;
         color: #fff;

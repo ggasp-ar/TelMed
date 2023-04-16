@@ -61,8 +61,9 @@
                             		<button  type="submit" class="button" >Ingresar</button>
 						         </form>
 						         <form class="col-sm-10 login-form" th:action="@{/registro}"method="GET">
-                                    <a class="forgot">No posee un usuario?</a><i class="fa fa-arrow-right" aria-hidden="true"></i>
-						            <button type="submit" class="button2">Regístrese</button>
+<!--                                     <a class="btn btn-link pull-right forgot" type="submit">No posee un usuario?</a><i class="fa fa-arrow-right" aria-hidden="true"></i> -->
+						            <button class="forgot" type="submit"><a class="btn btn-link pull-right" type="submit">No posee un usuario? Regístrese</a>
+						            <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 							     </form>
 							        
 <!-- 						         <div th:if="${param.error}" class="alert alert-danger"> -->
