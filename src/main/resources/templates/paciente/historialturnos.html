@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:insert="navbar :: navbar">  </div>
+  <div class="container" style="padding-top:50px">
+
+    <div th:if="${(turnos != null) and (!turnos.empty)}">
+      <table>
+        <tr>
+          <th>Fecha</th>
+          <th>Hora de Inicio</th>
+          <th>Hora de Fin</th>
+        </tr>
+        <tr th:each="t : ${turnos}">
+          <td th:text="${t.fecha}">Fecha</td>
+          <td th:text="${t.horaInicio}">Inicio</td>
+          <td th:text="${t.horaFin}">Fin</td>
+        </tr>
+      </table>
+    </div>
+    <div th:if="${(turnos == null) or (turnos.empty)}" class="alert alert-danger">
+      No hay turnos registrados.
+    </div>
+  </div>
+</div>
+<div th:insert="navbar :: bootstrap"></div>
+</body>
+</html>

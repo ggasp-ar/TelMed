@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="static/css/perfil.css" th:href="@{/css/perfil.css}">
+</head>
+<body>
+<div th:insert="navbar :: navbar">  </div>
+    <div class="container" style="padding-top:50px">
+        <div class="row" style="box-shadow: 5px 10px; padding:30px; border-style:solid; border-radius: 15px;border-width: thin">
+            <div class="col-md-4">
+                <div id="pic">
+                </div>
+                <h1 class="row" th:utext="${usuario.nombre}">
+                    Nombre completo
+                </h1>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <p>Datos de usuario</p>
+
+                    <p th:utext="'<strong>Rol: </strong> ' + ${usuario.rol}">Rol</p>
+
+                    <p th:utext="'<strong>Email: </strong> ' + ${usuario.email}">Especialidad</p>
+                </div>
+                <div th:switch="${usuario.rol}">
+                    <p th:case="ROLE_ADMIN">Admin</p>
+                    <div th:case="ROLE_MEDIC">
+                        <p> Datos del Medico </p>
+                        <p th:utext="'<strong>f: </strong> ' + ${usuario.getId()}">f</p>
+                        <p th:utext="'<strong>g: </strong> ' + ${usuario.getNombre()}">g</p>
+                        <p th:utext="'<strong>h: </strong> ' + ${usuario.getRol()}">h</p>
+                        <p th:utext="'<strong>i: </strong> ' + ${usuario.email}">i</p>
+                    </div>
+                    <div th:case="ROLE_USER">
+                        <p> Datos del Paciente </p>
+                        <p th:utext="'<strong>a: </strong> ' + ${usuario.email}">a</p>
+                        <p th:utext="'<strong>b: </strong> ' + ${usuario.email}">b</p>
+                        <p th:utext="'<strong>c: </strong> ' + ${usuario.email}">c</p>
+                        <p th:utext="'<strong>d: </strong> ' + ${usuario.email}">d</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div th:insert="navbar :: bootstrap"></div>
+</body>
+</html>

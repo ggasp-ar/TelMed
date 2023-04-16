@@ -54,9 +54,9 @@ public class ControladorUsuario {
 		  return "redirect:/usuario/inicio";
 	}
 
-	@GetMapping("/profile/{id}")
+	@GetMapping("/perfil/{id}")
 	public String userProfile(@PathVariable Long id, Model model) {
 		model.addAttribute("usuario", servicioUsuario.obtenerPorId(id));
-		return "usuario/profile";
+		return "usuario/perfil";
 	}
 }
