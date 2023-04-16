@@ -55,10 +55,10 @@
                     	<div class="tabs-content">
                             <!-- TABS CONTENT LOGIN -->
                     		<div id="login-tab-content" class="active">
-                    			<form class="login-form" th:action="@{/login}" method="POST">
+                    			<form class="login-form" th:action="@{/login}" th:method="POST">
                     				<input type="text" class="input" id="userName" name="username" placeholder="Email">
                     				<input type="password" class="input" id="userPassword" name="password" placeholder="Contraseña">
-                            		<button  type="submit" class="button" >Ingresar</button>
+                            		<button type="submit" class="button" >Ingresar</button>
 						         </form>
 						         <form class="col-sm-10 login-form" th:action="@{/registro}"method="GET">
                                     <a class="forgot">No posee un usuario?</a><i class="fa fa-arrow-right" aria-hidden="true"></i>

@@ -4,7 +4,7 @@ import java.util.List;
 
 import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.repositorios.RepositorioUsuario;
-import ar.edu.unnoba.poo.login.util.Roles;
+import ar.edu.unnoba.poo.login.util.Rol;
 import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +26,9 @@ public class ServicioUsuario {
 		return repositorioUsuario.findAll();
 	}
 	
-	public Usuario nuevo(Usuario usuario, Roles roles) {
+	public Usuario nuevo(Usuario usuario, Rol rol) {
 		usuario.setBloqueado(true);
-		usuario.setRol(roles.name());
+		usuario.setRol(rol/*.name()*/);
 		usuario.setContrasenia(encriptador.passwordEncrypt(usuario.getContrasenia()));
 	    return repositorioUsuario.save(usuario);
 	}
@@ -42,7 +42,8 @@ public class ServicioUsuario {
 	      .map(u -> {
 	        u.setEmail(usuario.getEmail());
 	        u.setContrasenia(encriptador.passwordEncrypt(usuario.getContrasenia()));
-	        u.setNombre(usuario.getNombre());
+//	        u.setNombre(usuario.getNombre());
+	        u.setRol(usuario.getRol());
 	        return repositorioUsuario.save(u);
 	      })
 	      .orElseGet(() -> {
@@ -50,7 +51,7 @@ public class ServicioUsuario {
 	      });
 	}
 
-	public void eliminar(@PathVariable Long id) {
+	public void eliminar(Long id) {
 		repositorioUsuario.deleteById(id);
 	}
 	
