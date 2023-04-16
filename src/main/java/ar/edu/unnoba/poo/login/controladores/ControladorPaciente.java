@@ -22,7 +22,7 @@ public class ControladorPaciente {
 	@GetMapping("/inicio")
 	public String obtenerTodos(Model model) {
 		model.addAttribute("pacientes", servicioPaciente.obtenerTodos());
-		return "inicio";
+		return "paciente/index";
 	}
 	
 	@GetMapping("/{id}")

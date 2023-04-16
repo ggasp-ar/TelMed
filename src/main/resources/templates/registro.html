@@ -54,12 +54,26 @@
                     	<div class="tabs-content">
                             <!-- TABS CONTENT LOGIN -->
                     		<div id="login-tab-content" class="active">
-                    			<form th:action="@{/registro}"th:object="${usuario}"method="POST">
+                    			<form th:action="@{/registro}"th:object="${paciente}"th:method="POST">
 		                                <input type="text" class="input" id="name" th:field="*{nombre}" placeholder="Nombre">
-		                                <input type="text" class="input" id="userName" th:field="*{email}" placeholder="Email">
-		                                <span th:if="${#fields.hasErrors('email')}"th:errors="*{email}">Mail invalido</span>
-		                                <input type="password" class="input" id="userPassword" th:field="*{contrasenia}" placeholder="Contraseña">
-                   						<button  type="submit" class="button" >Continuar</button>              	
+                                        <span th:if="${#fields.hasErrors('nombre')}"th:errors="*{nombre}">Nombre invalido</span>
+                                        
+                                        <input type="text" class="input" id="dni" th:field="*{dni}" placeholder="DNI">
+                                        <span th:if="${#fields.hasErrors('dni')}"th:errors="*{dni}">DNI invalido</span>
+                                        <!--
+                                        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" th:field="*{fechaNacimiento}" placeholder="Fecha de Nacimiento">
+                                        <span th:if="${#fields.hasErrors('fechaNacimiento')}"th:errors="*{fechaNacimiento}">Fecha de nacimiento invalida</span>
+
+                                        <input type="text" class="input" id="telefono" th:field="*{telefono}" placeholder="Teléfono">
+                                        <span th:if="${#fields.hasErrors('telefono')}"th:errors="*{telefono}">Teléfono invalido</span>
+                                        -->
+		                                <input type="text" class="input" id="userName" th:field="*{usuario.email}" placeholder="Email">
+		                                <span th:if="${#fields.hasErrors('usuario.email')}"th:errors="*{usuario.email}">Mail invalido</span>
+
+		                                <input type="password" class="input" id="userPassword" th:field="*{usuario.contrasenia}" placeholder="Contraseña">
+                                        <span th:if="${#fields.hasErrors('usuario.contrasenia')}"th:errors="*{usuario.contrasenia}">Contraseña invalida</span>
+                                        
+                                        <button  type="submit" class="button">Continuar</button>              	
 		                        </form>
                     		</div>
                     	</div>

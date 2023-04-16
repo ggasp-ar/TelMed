@@ -28,7 +28,8 @@ public class ServicioDetallesUsaurioImpl implements UserDetailsService {
     		ar.edu.unnoba.poo.login.entidades.Usuario u = servicioUsuario.obtenerPorEmail(email);
     		
     		List grantedAuthorities = new ArrayList();
-    		GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(u.getRol());
+    		// Agrego el toString al obtener el Rol
+    		GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(u.getRol().toString());
     		grantedAuthorities.add(grantedAuthority);
     		UsuarioLogueado usuario = new UsuarioLogueado(u.getEmail(), u.getContrasenia(), grantedAuthorities, u);
 

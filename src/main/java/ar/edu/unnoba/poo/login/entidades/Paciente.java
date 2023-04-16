@@ -1,58 +1,80 @@
 package ar.edu.unnoba.poo.login.entidades;
 
+import java.util.Date;
+import java.util.List;
+
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="pacientes")
-public class Paciente {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
-	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="usuarios_id", referencedColumnName="id")
-	private Usuario usuario;
-	@Column(nullable=false, unique=true)
-	private Long dni;
+public class Paciente extends Persona {
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	private Long id;
+//	@OneToOne(cascade=CascadeType.ALL)
+//	@JoinColumn(name="usuario_id", referencedColumnName="id")
+//	private Usuario usuario;
+//	@Column(nullable=false, unique=true, length=8)
+//	private String dni;
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="paciente")
+	private List<Turno> turnos;
 	
 	public Paciente() {
 		super();
 	}
 	
-	public Paciente(Usuario usuario, Long dni) {
-		super();
-		this.usuario = usuario;
-		this.dni = dni;
+	public Paciente(String nombre, String dni, Usuario usuario) {
+		super(nombre, dni, usuario);
+//		this.usuario = usuario;
+//		this.dni = dni;
 	}
 
-	public Long getId() {
-		return id;
+	public Paciente(String nombre, String dni, String telefono, 
+			Date fechaNacimiento, Usuario usuario, List<Turno> turnos) {
+		super(nombre, dni, usuario);
+		this.turnos = turnos;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public List<Turno> getTurnos() {
+		return turnos;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
+	public void setTurnos(List<Turno> turnos) {
+		this.turnos = turnos;
 	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	
+	public void addTurno(Turno turno) {
+		this.turnos.add(turno);
 	}
-
-	public Long getDni() {
-		return dni;
+	
+	public void removeTurno(Turno turno) {
+		this.turnos.remove(turno);
 	}
-
-	public void setDni(Long dni) {
-		this.dni = dni;
-	}
+	
+//	public Long getId() {
+//		return id;
+//	}
+//
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
+//
+//	public Usuario getUsuario() {
+//		return usuario;
+//	}
+//
+//	public void setUsuario(Usuario usuario) {
+//		this.usuario = usuario;
+//	}
+//
+//	public String getDni() {
+//		return dni;
+//	}
+//
+//	public void setDni(String dni) {
+//		this.dni = dni;
+//	}
 }

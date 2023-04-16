@@ -11,11 +11,14 @@
 <body>
     <h1 class="text-center">Detalles del médico</h1>
     <hr>
-    <p th:utext="'<strong>Nombre completo:</strong> ' + ${medico.usuario.nombre}">Nombre completo</p>
+    <p th:utext="'<strong>Nombre y Apellido:</strong> ' + ${medico.nombre}">Nombre y Apellido</p>
     <p th:utext="'<strong>Matrícula:</strong> ' + ${medico.matricula}">Matrícula</p>
-    <p th:utext="'<strong>Especialidad</strong> ' + ${medico.especialidad}">Especialidad</p>
+    <p><strong>Especialidades</strong></p>
+    <ul>
+       <li th:each="especialidad : ${medico.especialidades}" th:text="${especialidad.nombre}">Especialidad</li> 
+    </ul>
     <p th:utext="'<strong>Email:</strong> ' + ${medico.usuario.email}">Email</p>
-    <p th:utext="'<strong>Estado:</strong> ' + ${medico.usuario.bloqueado ? 'BLOQUEADO' : 'ACTIVO'}">Estado</p>
+    <p th:utext="'<strong>Estado:</strong> ' + ${not medico.usuario.bloqueado ? 'BLOQUEADO' : 'ACTIVO'}">Estado</p>
     <hr>
     <a class="btn btn-secondary mt-3" th:href="@{/medico/editar/{id} (id=${medico.id})}" href="medico/formulario.hml">Editar</a>
     <form action="#" th:action="@{/medico/{id} (id=${medico.id})}" th:method="DELETE">

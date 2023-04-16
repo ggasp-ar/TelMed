@@ -11,7 +11,7 @@
 <body>
     <h1 class="text-center">Detalles del paciente</h1>
     <hr>
-    <p th:utext="'<strong>Nombre completo:</strong> ' + ${paciente.usuario.nombre}">Nombre completo</p>
+    <p th:utext="'<strong>Nombre completo:</strong> ' + ${paciente.nombre}">Nombre completo</p>
     <p th:utext="'<strong>DNI:</strong> ' + ${paciente.dni}">DNI</p>
     <p th:utext="'<strong>Email:</strong> ' + ${paciente.usuario.email}">Email</p>
     <p th:utext="'<strong>Estado:</strong> ' + ${paciente.usuario.bloqueado ? 'BLOQUEADO' : 'ACTIVO'}">Estado</p>

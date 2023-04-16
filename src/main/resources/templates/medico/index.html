@@ -15,14 +15,13 @@
                 <tr>
                     <th>Nombre completo</th>
                     <th>Matrícula</th>
-                    <th>Especialidad</th>
+                    <!--<th>Especialidad</th>-->
                     <th>Email</th>
-                    <th colspan="3">Acciones</th>
+                    <th colspan="4">Acciones</th>
                 </tr>
                 <tr th:each="medico : ${medicos}">
-                    <td th:text="${medico.usuario.nombre}">Nombre</td>
+                    <td th:text="${medico.nombre}">Nombre</td>
                     <td th:text="${medico.matricula}">Matrícula</td>
-                    <td th:text="${medico.especialidad}">Especialidad</td>
                     <td th:text="${medico.usuario.email}">Email</td>
                     <td>
                     	<form action="#" th:action="@{/medico/{id} (id=${medico.id})}" th:method="DELETE">
@@ -34,6 +33,9 @@
                     </td>
                     <td>
                         <a th:href="@{/medico/editar/{id} (id=${medico.id})}" href="medico/formulario.html">Editar</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/medico/agenda/{id} (id=${medico.id})}" href="agenda/index.html">Agenda</a>
                     </td>
                 </tr>
             </table>
