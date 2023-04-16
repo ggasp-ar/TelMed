@@ -303,6 +303,10 @@ input {
 .form-wrap .tabs h3 a.active {
     color: #fff;
 }
+.form-wrap a:hover {
+    color: #fff;
+    text-decoration: none;
+}
 .form-wrap .tabs h3 a.active span {
     padding-bottom: 4px;
     border-bottom: 1px solid #5FD1C1;

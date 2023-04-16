@@ -1,39 +1,135 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-    	<meta charset="utf-8">
-        <title>Pacientes</title>
-        <!-- CSS only -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    </head>
-    <body>
-        <h1 class="text-center">Listado de Pacientes</h1>
-        <br>
-        <div th:if="${(pacientes != null) and (!pacientes.empty)}">
-            <table>
+<head>
+	<meta charset="utf-8">
+    <title>TelMed</title>
+    <!-- CSS only -->
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+   <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   
+   <!-- Los iconos tipo Solid de Fontawesome-->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+   <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  
+   <!-- Nuestro css-->
+   <link rel="stylesheet" type="text/css" href="static/css/paciente/index.css" th:href="@{/css/paciente/index.css}">	
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-3 mt-lg-0 user-img">
+        <img
+          src="static/img/icon.png"
+          height="50"
+          loading="lazy"
+          th:src="@{/img/icon.png}"
+          th:action="@{/home}"
+        />
+        <a class="navbar-brand mt-3 mt-lg-0">
+        <h4>TELMED</h4>
+        </a>
+      </a>
+    </div>
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+     <form th:action="@{/logout}" method="post">
+    	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    		<li class="nav-item">
+	          <a class="nav-link" href="#">Detalles del paciente</a>
+	        </li>
+	        <li class="nav-item">
+	          <button class="nav-item item">
+	          	<a class="nav-link" type="submit" value="Cerrar Sesion">Cerrar Sesión</a>
+	          </button>
+	        </li> 	
+	          <!--<div th:if="${message}" class="alert alert-success">
+					        	<span th:text="${message}"></span>
+					        </div>-->
+<!-- 			          <li class="nav-item"> -->
+<!-- 			            <a class="nav-link" th:href="@{/hello}">Logout</a> -->
+<!-- 			          </li> -->
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav> 	
+<!-- Navbar -->
+    
+<div class="title h1 text-center">Listado de Pacientes</div>
+<!--  <br> -->
+<!--         <div th:if="${(pacientes != null) and (!pacientes.empty)}"> -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-md-6">
+		<table class="table table-striped">
                 <tr>
                     <th>Nombre</th>
                     <th>DNI</th>
                     <th>Email</th>
-                    <th>Eliminar</th>
+                    <th>Bloquear</th>
                 </tr>
-                <tr th:each="paciente : ${pacientes}">
-                    <td th:text="${paciente.nombre}">Nombre</td>
-                    <td th:text="${paciente.dni}">DNI</td>
-                    <td th:text="${paciente.usuario.email}">Email</td>
+                <tr>
+<!--                 <tr th:each="paciente : ${pacientes}"> -->
+<!--                     <td th:text="${paciente.usuario.nombre}">Nombre</td> -->
+<!--                     <td th:text="${paciente.dni}">DNI</td> -->
+<!--                     <td th:text="${paciente.usuario.rol}">Rol</td> -->
+<!--                     <td th:text="${paciente.usuario.email}">Email</td> -->
+						<td>Nombre</td>
+						<td>DNI</td>
+						<td>Rol</td>
+						<td>Email</td>
                     <td>
-                    	<form action="#" th:action="@{/paciente/{id} (id=${paciente.id})}" th:method="DELETE">
-             				<button class="btn btn-danger" type="submit">Eliminar</button>
+                    	<form>
+<!--                     	<form action="#" th:action="@{/paciente/{id} (id=${paciente.id})}" th:method="DELETE"> -->
+<!--              				<button class="btn btn-danger" type="submit">Eliminar</button> -->
+							<img
+				              class="reservado"
+					          src="static/img/bloquear-usuario.png"
+					          height="50"
+					          loading="lazy"
+					          role="button"
+					          href="#"
+					          th:src="@{/img/bloquear-usuario.png}"
+					          th:action="@{/home}"
+					         />
              			</form>
                     </td>
                 </tr>
             </table>
         </div>
-        <div th:if="${(pacientes == null) or (pacientes.empty)}" class="alert alert-danger">
-            No hay pacientes registrados.
-        </div>
-        <form th:action="@{/}"method="GET">
-            <button type="sumbit" class="btn btn-primary mt-3">Volver</button>
-        </form>
+      </div>
+    </div>
+<!--         <div th:if="${(patients == null) or (patients.empty)}" class="alert alert-danger"> -->
+<!--             No hay pacientes registrados. -->
+<!--         </div> -->
+	<div class="col-6">
+      <form th:action="@{/hello}"method="GET">
+      	<input class="button cards" type="submit" value="Volver"></input> 
+<!--             <button type="sumbit" class="btn btn-primary mt-3">Volver</button> -->
+       </form>
+    </div>
+ 
     </body>
 </html>

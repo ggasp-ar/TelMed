@@ -1,0 +1,542 @@
+2023-04-11 11:13:35,228 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-11 11:15:18,864 [Worker-3: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: ar.com.bbva.fnet:fnetcore:0.79.RC0 @ C:\BBVA\fnetcore\pom.xml.
+2023-04-11 11:15:22,026 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxrpc:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:23,643 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging:jar:1.0.4 is missing, no dependency information available
+2023-04-11 11:15:23,681 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging-api:jar:1.0.2 is missing, no dependency information available
+2023-04-11 11:15:24,179 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_netutils:jar:2.1_191108 is missing, no dependency information available
+2023-04-11 11:15:24,210 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_utils:jar:2.0_171009 is missing, no dependency information available
+2023-04-11 11:15:24,224 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM:jar:4.3_200318 is missing, no dependency information available
+2023-04-11 11:15:24,238 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_Mapping:jar:1.0_151022 is missing, no dependency information available
+2023-04-11 11:15:24,252 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_bbvaPaq:jar:2.0.4 is missing, no dependency information available
+2023-04-11 11:15:24,265 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_ConectorSoa:jar:1.0_190228 is missing, no dependency information available
+2023-04-11 11:15:24,280 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_MensajeriaSoa:jar:1.0_180810 is missing, no dependency information available
+2023-04-11 11:15:24,298 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_BBVAWeb:jar:1.14_151016 is missing, no dependency information available
+2023-04-11 11:15:24,313 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_Host:jar:1.1_140821 is missing, no dependency information available
+2023-04-11 11:15:24,326 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_gateway:jar:5.0_170515 is missing, no dependency information available
+2023-04-11 11:15:24,768 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_jce:jar:2.1_110616 is missing, no dependency information available
+2023-04-11 11:15:24,778 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wss4j:jar:1.5.12 is missing, no dependency information available
+2023-04-11 11:15:24,787 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:MonitorBloqueosIPCommons:jar:1.0_120522 is missing, no dependency information available
+2023-04-11 11:15:24,800 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ControlDReports:jar:1.2_180123 is missing, no dependency information available
+2023-04-11 11:15:24,813 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:bmc-ctd-citkit-beans-bbvabf:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:24,872 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:KeyValuePair:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:24,881 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wsdl4j:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:24,890 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxen:jar:1.1.1 is missing, no dependency information available
+2023-04-11 11:15:24,963 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jconn2:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:24,971 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:iaik_jce_full_signed:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:25,575 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jasperreports:jar:5.1.0 is missing, no dependency information available
+2023-04-11 11:15:25,586 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:itext:jar:2.1.7 is missing, no dependency information available
+2023-04-11 11:15:25,751 [Worker-3: Updating Maven Dependencies] WARN  o.a.m.r.i.DefaultArtifactDescriptorReader - The artifact bouncycastle:bctsp-jdk14:jar:138 has been relocated to org.bouncycastle:bctsp-jdk14:jar:1.38
+2023-04-11 11:15:25,861 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:imgscalr-lib:jar:4.2 is missing, no dependency information available
+2023-04-11 11:15:26,052 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:coldviewapi:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:26,067 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_codec:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:26,080 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_core:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,171 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxrpc:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,245 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging:jar:1.0.4 is missing, no dependency information available
+2023-04-11 11:15:57,247 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging-api:jar:1.0.2 is missing, no dependency information available
+2023-04-11 11:15:57,276 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_netutils:jar:2.1_191108 is missing, no dependency information available
+2023-04-11 11:15:57,278 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_utils:jar:2.0_171009 is missing, no dependency information available
+2023-04-11 11:15:57,281 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM:jar:4.3_200318 is missing, no dependency information available
+2023-04-11 11:15:57,282 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_Mapping:jar:1.0_151022 is missing, no dependency information available
+2023-04-11 11:15:57,284 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_bbvaPaq:jar:2.0.4 is missing, no dependency information available
+2023-04-11 11:15:57,287 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_ConectorSoa:jar:1.0_190228 is missing, no dependency information available
+2023-04-11 11:15:57,291 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_MensajeriaSoa:jar:1.0_180810 is missing, no dependency information available
+2023-04-11 11:15:57,293 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_BBVAWeb:jar:1.14_151016 is missing, no dependency information available
+2023-04-11 11:15:57,295 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_Host:jar:1.1_140821 is missing, no dependency information available
+2023-04-11 11:15:57,297 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_gateway:jar:5.0_170515 is missing, no dependency information available
+2023-04-11 11:15:57,328 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_jce:jar:2.1_110616 is missing, no dependency information available
+2023-04-11 11:15:57,330 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wss4j:jar:1.5.12 is missing, no dependency information available
+2023-04-11 11:15:57,332 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:MonitorBloqueosIPCommons:jar:1.0_120522 is missing, no dependency information available
+2023-04-11 11:15:57,334 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ControlDReports:jar:1.2_180123 is missing, no dependency information available
+2023-04-11 11:15:57,336 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:bmc-ctd-citkit-beans-bbvabf:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,342 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:KeyValuePair:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,345 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wsdl4j:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,347 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxen:jar:1.1.1 is missing, no dependency information available
+2023-04-11 11:15:57,357 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jconn2:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,359 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:iaik_jce_full_signed:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,409 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jasperreports:jar:5.1.0 is missing, no dependency information available
+2023-04-11 11:15:57,411 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:itext:jar:2.1.7 is missing, no dependency information available
+2023-04-11 11:15:57,424 [Worker-3: Updating Maven Dependencies] WARN  o.a.m.r.i.DefaultArtifactDescriptorReader - The artifact bouncycastle:bctsp-jdk14:jar:138 has been relocated to org.bouncycastle:bctsp-jdk14:jar:1.38
+2023-04-11 11:15:57,438 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:imgscalr-lib:jar:4.2 is missing, no dependency information available
+2023-04-11 11:15:57,452 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:coldviewapi:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,455 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_codec:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:57,457 [Worker-3: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_core:jar:1.0 is missing, no dependency information available
+2023-04-11 11:15:59,140 [Worker-3: Updating Maven Dependencies] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.ExceptionInInitializerError: Cannot access defaults field of Properties
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086)
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57)
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162)
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81)
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:359)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227)
+	at org.eclipse.m2e.wtp.mavenarchiver.AbstractWTPArchiverConfigurator.mavenProjectChanged(AbstractWTPArchiverConfigurator.java:56)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:1056)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:806)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:972)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:148)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1416)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Cannot access defaults field of Properties
+	at com.thoughtworks.xstream.converters.collections.PropertiesConverter.<clinit>(PropertiesConverter.java:46)
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:647)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:445)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:385)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:342)
+	at org.apache.maven.plugin.war.util.WebappStructureSerializer.<clinit>(WebappStructureSerializer.java:47)
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:316)
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:48)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	... 32 common frames omitted
+2023-04-11 11:16:10,868 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxrpc:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:10,943 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging:jar:1.0.4 is missing, no dependency information available
+2023-04-11 11:16:10,946 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging-api:jar:1.0.2 is missing, no dependency information available
+2023-04-11 11:16:10,984 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_netutils:jar:2.1_191108 is missing, no dependency information available
+2023-04-11 11:16:10,987 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_utils:jar:2.0_171009 is missing, no dependency information available
+2023-04-11 11:16:10,989 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM:jar:4.3_200318 is missing, no dependency information available
+2023-04-11 11:16:10,991 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_Mapping:jar:1.0_151022 is missing, no dependency information available
+2023-04-11 11:16:10,993 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_bbvaPaq:jar:2.0.4 is missing, no dependency information available
+2023-04-11 11:16:10,995 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_ConectorSoa:jar:1.0_190228 is missing, no dependency information available
+2023-04-11 11:16:10,997 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_MensajeriaSoa:jar:1.0_180810 is missing, no dependency information available
+2023-04-11 11:16:10,999 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_BBVAWeb:jar:1.14_151016 is missing, no dependency information available
+2023-04-11 11:16:11,001 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_Host:jar:1.1_140821 is missing, no dependency information available
+2023-04-11 11:16:11,004 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_gateway:jar:5.0_170515 is missing, no dependency information available
+2023-04-11 11:16:11,039 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_jce:jar:2.1_110616 is missing, no dependency information available
+2023-04-11 11:16:11,041 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wss4j:jar:1.5.12 is missing, no dependency information available
+2023-04-11 11:16:11,044 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:MonitorBloqueosIPCommons:jar:1.0_120522 is missing, no dependency information available
+2023-04-11 11:16:11,048 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ControlDReports:jar:1.2_180123 is missing, no dependency information available
+2023-04-11 11:16:11,051 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:bmc-ctd-citkit-beans-bbvabf:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:11,057 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:KeyValuePair:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:11,060 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wsdl4j:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:11,064 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxen:jar:1.1.1 is missing, no dependency information available
+2023-04-11 11:16:11,079 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jconn2:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:11,082 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:iaik_jce_full_signed:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:11,146 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jasperreports:jar:5.1.0 is missing, no dependency information available
+2023-04-11 11:16:11,157 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:itext:jar:2.1.7 is missing, no dependency information available
+2023-04-11 11:16:11,173 [Worker-2: Building] WARN  o.a.m.r.i.DefaultArtifactDescriptorReader - The artifact bouncycastle:bctsp-jdk14:jar:138 has been relocated to org.bouncycastle:bctsp-jdk14:jar:1.38
+2023-04-11 11:16:11,183 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:imgscalr-lib:jar:4.2 is missing, no dependency information available
+2023-04-11 11:16:11,204 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:coldviewapi:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:11,207 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_codec:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:11,209 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_core:jar:1.0 is missing, no dependency information available
+2023-04-11 11:16:12,652 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'ISO-8859-1' encoding to copy filtered resources.
+2023-04-11 11:16:12,690 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 918 resources
+2023-04-11 11:16:21,833 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'ISO-8859-1' encoding to copy filtered resources.
+2023-04-11 11:16:21,833 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\BBVA\fnetcore\src\test\resources
+2023-04-11 11:16:21,850 [Worker-2: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086)
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57)
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162)
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81)
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:359)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:117)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:198)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1024)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:254)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:311)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:400)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:403)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:514)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:462)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:544)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:316)
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:48)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	... 47 common frames omitted
+2023-04-11 11:18:44,353 [Worker-17: Updating Maven Dependencies] ERROR o.e.m.c.i.p.r.ProjectRegistryRefreshJob - Resource '/fnetcore/pom.xml' does not exist.
+org.eclipse.core.internal.resources.ResourceException: Resource '/fnetcore/pom.xml' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.deleteMarkers(Resource.java:810)
+	at org.eclipse.m2e.core.internal.markers.MavenMarkerManager.deleteMarkers(MavenMarkerManager.java:251)
+	at org.eclipse.m2e.core.internal.markers.MavenMarkerManager.deleteMarkers(MavenMarkerManager.java:245)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readMavenProjectFacades(ProjectRegistryManager.java:702)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:416)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:349)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$4(ProjectRegistryRefreshJob.java:140)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1411)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:139)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1416)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Resource '/fnetcore/pom.xml' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 20 common frames omitted
+2023-04-11 11:20:21,469 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-11 11:21:02,536 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-11 11:22:57,775 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxrpc:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:58,382 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging:jar:1.0.4 is missing, no dependency information available
+2023-04-11 11:22:58,390 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging-api:jar:1.0.2 is missing, no dependency information available
+2023-04-11 11:22:58,541 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_netutils:jar:2.1_191108 is missing, no dependency information available
+2023-04-11 11:22:58,548 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_utils:jar:2.0_171009 is missing, no dependency information available
+2023-04-11 11:22:58,555 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM:jar:4.3_200318 is missing, no dependency information available
+2023-04-11 11:22:58,562 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_Mapping:jar:1.0_151022 is missing, no dependency information available
+2023-04-11 11:22:58,569 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_bbvaPaq:jar:2.0.4 is missing, no dependency information available
+2023-04-11 11:22:58,576 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_ConectorSoa:jar:1.0_190228 is missing, no dependency information available
+2023-04-11 11:22:58,583 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_MensajeriaSoa:jar:1.0_180810 is missing, no dependency information available
+2023-04-11 11:22:58,590 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_BBVAWeb:jar:1.14_151016 is missing, no dependency information available
+2023-04-11 11:22:58,599 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_Host:jar:1.1_140821 is missing, no dependency information available
+2023-04-11 11:22:58,610 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_gateway:jar:5.0_170515 is missing, no dependency information available
+2023-04-11 11:22:58,874 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_jce:jar:2.1_110616 is missing, no dependency information available
+2023-04-11 11:22:58,882 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wss4j:jar:1.5.12 is missing, no dependency information available
+2023-04-11 11:22:58,892 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:MonitorBloqueosIPCommons:jar:1.0_120522 is missing, no dependency information available
+2023-04-11 11:22:58,900 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ControlDReports:jar:1.2_180123 is missing, no dependency information available
+2023-04-11 11:22:58,907 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:bmc-ctd-citkit-beans-bbvabf:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:58,953 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:KeyValuePair:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:58,960 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wsdl4j:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:58,967 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxen:jar:1.1.1 is missing, no dependency information available
+2023-04-11 11:22:59,011 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jconn2:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:59,016 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:iaik_jce_full_signed:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:59,465 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jasperreports:jar:5.1.0 is missing, no dependency information available
+2023-04-11 11:22:59,474 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:itext:jar:2.1.7 is missing, no dependency information available
+2023-04-11 11:22:59,565 [Worker-0: Building] WARN  o.a.m.r.i.DefaultArtifactDescriptorReader - The artifact bouncycastle:bctsp-jdk14:jar:138 has been relocated to org.bouncycastle:bctsp-jdk14:jar:1.38
+2023-04-11 11:22:59,628 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:imgscalr-lib:jar:4.2 is missing, no dependency information available
+2023-04-11 11:22:59,767 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:coldviewapi:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:59,773 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_codec:jar:1.0 is missing, no dependency information available
+2023-04-11 11:22:59,779 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_core:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:01,923 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'ISO-8859-1' encoding to copy filtered resources.
+2023-04-11 11:23:01,942 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 918 resources
+2023-04-11 11:23:02,452 [Worker-11: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: ar.com.bbva.fnet:fnetcore:0.79.RC0 @ C:\BBVA\fnetcore\pom.xml.
+2023-04-11 11:23:02,590 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxrpc:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,644 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging:jar:1.0.4 is missing, no dependency information available
+2023-04-11 11:23:02,645 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging-api:jar:1.0.2 is missing, no dependency information available
+2023-04-11 11:23:02,673 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_netutils:jar:2.1_191108 is missing, no dependency information available
+2023-04-11 11:23:02,674 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_utils:jar:2.0_171009 is missing, no dependency information available
+2023-04-11 11:23:02,676 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM:jar:4.3_200318 is missing, no dependency information available
+2023-04-11 11:23:02,678 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_Mapping:jar:1.0_151022 is missing, no dependency information available
+2023-04-11 11:23:02,681 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_bbvaPaq:jar:2.0.4 is missing, no dependency information available
+2023-04-11 11:23:02,682 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_ConectorSoa:jar:1.0_190228 is missing, no dependency information available
+2023-04-11 11:23:02,685 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_MensajeriaSoa:jar:1.0_180810 is missing, no dependency information available
+2023-04-11 11:23:02,687 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_BBVAWeb:jar:1.14_151016 is missing, no dependency information available
+2023-04-11 11:23:02,688 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_Host:jar:1.1_140821 is missing, no dependency information available
+2023-04-11 11:23:02,690 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_gateway:jar:5.0_170515 is missing, no dependency information available
+2023-04-11 11:23:02,725 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_jce:jar:2.1_110616 is missing, no dependency information available
+2023-04-11 11:23:02,728 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wss4j:jar:1.5.12 is missing, no dependency information available
+2023-04-11 11:23:02,730 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:MonitorBloqueosIPCommons:jar:1.0_120522 is missing, no dependency information available
+2023-04-11 11:23:02,732 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ControlDReports:jar:1.2_180123 is missing, no dependency information available
+2023-04-11 11:23:02,733 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:bmc-ctd-citkit-beans-bbvabf:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,743 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:KeyValuePair:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,745 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wsdl4j:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,747 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxen:jar:1.1.1 is missing, no dependency information available
+2023-04-11 11:23:02,756 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jconn2:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,758 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:iaik_jce_full_signed:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,809 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jasperreports:jar:5.1.0 is missing, no dependency information available
+2023-04-11 11:23:02,810 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:itext:jar:2.1.7 is missing, no dependency information available
+2023-04-11 11:23:02,818 [Worker-11: Updating Maven Dependencies] WARN  o.a.m.r.i.DefaultArtifactDescriptorReader - The artifact bouncycastle:bctsp-jdk14:jar:138 has been relocated to org.bouncycastle:bctsp-jdk14:jar:1.38
+2023-04-11 11:23:02,827 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:imgscalr-lib:jar:4.2 is missing, no dependency information available
+2023-04-11 11:23:02,840 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:coldviewapi:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,842 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_codec:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:02,843 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_core:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:12,178 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'ISO-8859-1' encoding to copy filtered resources.
+2023-04-11 11:23:12,178 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\BBVA\fnetcore\src\test\resources
+2023-04-11 11:23:12,185 [Worker-0: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of fnetcore
+2023-04-11 11:23:12,187 [Worker-0: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for fnetcore
+2023-04-11 11:23:12,283 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'ISO-8859-1' encoding to copy filtered resources.
+2023-04-11 11:23:13,044 [Worker-0: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.ExceptionInInitializerError: Cannot access defaults field of Properties
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086)
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57)
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162)
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81)
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:359)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:117)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:198)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1024)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:254)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:311)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:400)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:403)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:514)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:462)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:544)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Cannot access defaults field of Properties
+	at com.thoughtworks.xstream.converters.collections.PropertiesConverter.<clinit>(PropertiesConverter.java:46)
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:647)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:445)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:385)
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:342)
+	at org.apache.maven.plugin.war.util.WebappStructureSerializer.<clinit>(WebappStructureSerializer.java:47)
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:316)
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:48)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	... 47 common frames omitted
+2023-04-11 11:23:13,531 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxrpc:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,565 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging:jar:1.0.4 is missing, no dependency information available
+2023-04-11 11:23:13,567 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging-api:jar:1.0.2 is missing, no dependency information available
+2023-04-11 11:23:13,583 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_netutils:jar:2.1_191108 is missing, no dependency information available
+2023-04-11 11:23:13,585 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_utils:jar:2.0_171009 is missing, no dependency information available
+2023-04-11 11:23:13,586 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM:jar:4.3_200318 is missing, no dependency information available
+2023-04-11 11:23:13,587 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_Mapping:jar:1.0_151022 is missing, no dependency information available
+2023-04-11 11:23:13,588 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_bbvaPaq:jar:2.0.4 is missing, no dependency information available
+2023-04-11 11:23:13,590 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_ConectorSoa:jar:1.0_190228 is missing, no dependency information available
+2023-04-11 11:23:13,591 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_MensajeriaSoa:jar:1.0_180810 is missing, no dependency information available
+2023-04-11 11:23:13,592 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_BBVAWeb:jar:1.14_151016 is missing, no dependency information available
+2023-04-11 11:23:13,593 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_Host:jar:1.1_140821 is missing, no dependency information available
+2023-04-11 11:23:13,594 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_gateway:jar:5.0_170515 is missing, no dependency information available
+2023-04-11 11:23:13,615 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_jce:jar:2.1_110616 is missing, no dependency information available
+2023-04-11 11:23:13,617 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wss4j:jar:1.5.12 is missing, no dependency information available
+2023-04-11 11:23:13,618 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:MonitorBloqueosIPCommons:jar:1.0_120522 is missing, no dependency information available
+2023-04-11 11:23:13,619 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ControlDReports:jar:1.2_180123 is missing, no dependency information available
+2023-04-11 11:23:13,620 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:bmc-ctd-citkit-beans-bbvabf:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,623 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:KeyValuePair:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,624 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wsdl4j:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,625 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxen:jar:1.1.1 is missing, no dependency information available
+2023-04-11 11:23:13,630 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jconn2:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,632 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:iaik_jce_full_signed:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,662 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jasperreports:jar:5.1.0 is missing, no dependency information available
+2023-04-11 11:23:13,663 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:itext:jar:2.1.7 is missing, no dependency information available
+2023-04-11 11:23:13,668 [Worker-11: Updating Maven Dependencies] WARN  o.a.m.r.i.DefaultArtifactDescriptorReader - The artifact bouncycastle:bctsp-jdk14:jar:138 has been relocated to org.bouncycastle:bctsp-jdk14:jar:1.38
+2023-04-11 11:23:13,672 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:imgscalr-lib:jar:4.2 is missing, no dependency information available
+2023-04-11 11:23:13,682 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:coldviewapi:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,684 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_codec:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,685 [Worker-11: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_core:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:13,782 [Worker-11: Updating Maven Dependencies] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086)
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57)
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162)
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81)
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:359)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422)
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227)
+	at org.eclipse.m2e.wtp.mavenarchiver.AbstractWTPArchiverConfigurator.mavenProjectChanged(AbstractWTPArchiverConfigurator.java:56)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:1056)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:806)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:972)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:148)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1416)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:316)
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:48)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050)
+	... 32 common frames omitted
+2023-04-11 11:23:14,642 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxrpc:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,682 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging:jar:1.0.4 is missing, no dependency information available
+2023-04-11 11:23:14,684 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:commons-logging-api:jar:1.0.2 is missing, no dependency information available
+2023-04-11 11:23:14,701 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_netutils:jar:2.1_191108 is missing, no dependency information available
+2023-04-11 11:23:14,702 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_utils:jar:2.0_171009 is missing, no dependency information available
+2023-04-11 11:23:14,703 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM:jar:4.3_200318 is missing, no dependency information available
+2023-04-11 11:23:14,704 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_Mapping:jar:1.0_151022 is missing, no dependency information available
+2023-04-11 11:23:14,705 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_bbvaPaq:jar:2.0.4 is missing, no dependency information available
+2023-04-11 11:23:14,706 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_ConectorSoa:jar:1.0_190228 is missing, no dependency information available
+2023-04-11 11:23:14,707 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_MensajeriaSoa:jar:1.0_180810 is missing, no dependency information available
+2023-04-11 11:23:14,708 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_BBVAWeb:jar:1.14_151016 is missing, no dependency information available
+2023-04-11 11:23:14,709 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ARQ_SAM_plugin_Host:jar:1.1_140821 is missing, no dependency information available
+2023-04-11 11:23:14,710 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_gateway:jar:5.0_170515 is missing, no dependency information available
+2023-04-11 11:23:14,724 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:CNLS_jce:jar:2.1_110616 is missing, no dependency information available
+2023-04-11 11:23:14,725 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wss4j:jar:1.5.12 is missing, no dependency information available
+2023-04-11 11:23:14,726 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:MonitorBloqueosIPCommons:jar:1.0_120522 is missing, no dependency information available
+2023-04-11 11:23:14,727 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:ControlDReports:jar:1.2_180123 is missing, no dependency information available
+2023-04-11 11:23:14,728 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:bmc-ctd-citkit-beans-bbvabf:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,731 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:KeyValuePair:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,733 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:wsdl4j:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,734 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jaxen:jar:1.1.1 is missing, no dependency information available
+2023-04-11 11:23:14,739 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jconn2:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,740 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:iaik_jce_full_signed:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,767 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jasperreports:jar:5.1.0 is missing, no dependency information available
+2023-04-11 11:23:14,769 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:itext:jar:2.1.7 is missing, no dependency information available
+2023-04-11 11:23:14,775 [Worker-11: Building] WARN  o.a.m.r.i.DefaultArtifactDescriptorReader - The artifact bouncycastle:bctsp-jdk14:jar:138 has been relocated to org.bouncycastle:bctsp-jdk14:jar:1.38
+2023-04-11 11:23:14,781 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:imgscalr-lib:jar:4.2 is missing, no dependency information available
+2023-04-11 11:23:14,791 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:coldviewapi:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,792 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_codec:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,793 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ar.com.bbva.fnetcore.custom:jai_core:jar:1.0 is missing, no dependency information available
+2023-04-11 11:23:14,874 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'ISO-8859-1' encoding to copy filtered resources.
+2023-04-11 11:23:14,875 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-04-11 11:23:14,876 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'ISO-8859-1' encoding to copy filtered resources.
+2023-04-11 11:23:14,877 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\BBVA\fnetcore\src\test\resources
