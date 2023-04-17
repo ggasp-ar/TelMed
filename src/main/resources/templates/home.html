@@ -66,7 +66,7 @@
 	        <li class="nav-item">
 	          <a class="nav-link" href="#">Términos y condiciones</a>
 	        </li>
-	        <li class="nav-item">
+	        <li sec:authorize="isAuthenticated()" class="nav-item">
 	          <button class="nav-item item">
 	          	<a class="nav-link" type="submit" value="Cerrar Sesion">Cerrar Sesion</a>
 	          </button>

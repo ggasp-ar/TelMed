@@ -104,7 +104,7 @@
 	<div class="search">
 	    <form class="lupa" action="#">
 	        <input type="text"
-	            placeholder=" Search Courses"
+	            placeholder=" Buscar medico"
 	            name="search">
 	        <button>
 	            <i class="fa fa-search"
@@ -115,12 +115,11 @@
 	</div>
 	
 	<!-- CARDS -->
-	<form th:action="@{/logout}" method="post">
 	<div class="container">
 		<div class="row">
 		    <div class="row pt-5 m-auto h-100" style="width: 65em">
-		      <div class="col-md-6 col-lg-4 pb-3">      
-		        <div class="card card-custom bg-white border-white border-0" >
+		      <div th:each="medico : ${medicos}" class="col-md-6 col-lg-4 pb-3">      
+		        <div class="card card-custom bg-white border-white border-0">
 		          <div class="card-custom-img"><div class="card-custom-img" style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);"></div></div>
 		          <div class="card-custom-avatar">
 		          
@@ -135,13 +134,12 @@
 		             />
 		          </div>
 		          <div class="card-body">
-		            <h4 class="card-title">Dr/a:</h4>
-	
-		            <button class="button cards" type="submit" value="Turno usuario"><b>Solicitar turno</b></button> 
+		            <h4 class="card-title" th:text="'Dr/a: ' + ${medico.nombre}"></h4>
+		            <a class="button cards" th:href="@{/solicitar-turno/{id}(id=${medico.id})}"><b>Solicitar turno</b></a>
 		          </div>
 		        </div>  
 		      </div>	      
-		      
+		      <!--
 		      <div class="col-md-6 col-lg-4 pb-3">
 		          <div class="card card-custom bg-white border-white border-0" style="height: 100px">
 		          <div class="card-custom-img"><div class="card-custom-img" style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);"></div></div>
@@ -163,7 +161,8 @@
 		          </div>
 		        </div>
 		      </div>
-		      
+		      -->
+			  <!--
 		      <div class="col-md-6 col-lg-4 pb-3">
 		        <div class="card card-custom bg-white border-white border-0" style="height: 100px">
 		          <div class="card-custom-img"><div class="card-custom-img" style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);"></div></div>
@@ -184,9 +183,9 @@
 		          </div>
 		        </div>
 		      </div>
+			  -->
 	   		</div>
 		</div>
-	 </div>  
-	</form> 
+	 </div> 
  </body>
 </html>

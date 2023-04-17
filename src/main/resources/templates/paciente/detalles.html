@@ -86,13 +86,13 @@
    		<div class="col-sm-5 col-md-6">
 		    <table class="table table-striped">
 			    <strong>
-				    <p>Nombre completo: </p>
+				    <p th:text="'Nombre completo: ' + ${paciente.nombre}">Nombre completo</p>
 				    <hr class="tab">
-				    <p>DNI: </p>
+				    <p th:text="'DNI: ' + ${paciente.dni}">DNI</p>
 				    <hr class="tab">
-				    <p>Email: </p>
+				    <p th:text="'Email: ' + ${paciente.usuario.email}">Email</p>
 				    <hr class="tab">
-				    <p>Estado: </p>
+				    <p th:text="'Estado: ' + (${!paciente.usuario.bloqueado} ? 'Bloqueado' : 'Activo')">Estado</p>
 				    <hr class="tab">
 				</strong>
 			</table>
@@ -101,11 +101,7 @@
   </div>
 </div>
   
-    <div class="col-6">
-      <form th:action="@{/hello}"method="GET">
-      	<input class="button cards" type="submit" value="Volver"></input> 
+<a href="#" th:href="@{/paciente/inicio}" class="btn btn-secondary ml-3">Volver</a> 
 <!--             <button type="sumbit" class="btn btn-primary mt-3">Volver</button> -->
-       </form>
-    </div>
 </body>
 </html>

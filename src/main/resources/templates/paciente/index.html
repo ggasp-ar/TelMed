@@ -56,9 +56,11 @@
     <div class="d-flex align-items-center">
      <form th:action="@{/logout}" method="post">
     	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!--
     		<li class="nav-item">
 	          <a class="nav-link" href="#">Detalles del paciente</a>
 	        </li>
+          -->
 	        <li class="nav-item">
 	          <button class="nav-item item">
 	          	<a class="nav-link" type="submit" value="Cerrar Sesion">Cerrar Sesión</a>
@@ -88,33 +90,36 @@
                     <th>Nombre</th>
                     <th>DNI</th>
                     <th>Email</th>
-                    <th>Bloquear</th>
+                    <th>Estado</th>
+                    <th colspan="2">Acciones</th>
                 </tr>
-                <tr>
+                <tr th:each="paciente : ${pacientes}">
 <!--                 <tr th:each="paciente : ${pacientes}"> -->
 <!--                     <td th:text="${paciente.usuario.nombre}">Nombre</td> -->
 <!--                     <td th:text="${paciente.dni}">DNI</td> -->
 <!--                     <td th:text="${paciente.usuario.rol}">Rol</td> -->
 <!--                     <td th:text="${paciente.usuario.email}">Email</td> -->
-						<td>Nombre</td>
-						<td>DNI</td>
-						<td>Rol</td>
-						<td>Email</td>
+                    <td th:text="${paciente.nombre}">Nombre</td>
+                    <td th:text="${paciente.dni}">DNI</td>
+                    <td th:text="${paciente.usuario.email}">Email</td>
+                    <td th:utext="(${!paciente.usuario.bloqueado} ? 'Bloqueado' : 'Activo')"></td>
                     <td>
-                    	<form>
+                    	<form action="#" th:action="@{/paciente/{id}(id=${paciente.id})}" th:method="put">
 <!--                     	<form action="#" th:action="@{/paciente/{id} (id=${paciente.id})}" th:method="DELETE"> -->
 <!--              				<button class="btn btn-danger" type="submit">Eliminar</button> -->
-							<img
-				              class="reservado"
-					          src="static/img/bloquear-usuario.png"
-					          height="50"
-					          loading="lazy"
-					          role="button"
-					          href="#"
-					          th:src="@{/img/bloquear-usuario.png}"
-					          th:action="@{/home}"
-					         />
-             			</form>
+                        <button class="eliminar" type="submit">
+                          <img
+                            class="reservado"
+                            height="50"
+                            loading="lazy"
+                            role="button"
+                            th:src="${!paciente.usuario.bloqueado} ? @{/img/desbloquear.png} : @{/img/bloquear-usuario.png}"
+                          />
+                        </button>
+             			    </form>
+                    </td>
+                    <td>
+                      <a href="#" th:href="@{/paciente/{id}(id=${paciente.id})}">Detalles</a>
                     </td>
                 </tr>
             </table>

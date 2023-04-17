@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import ar.edu.unnoba.poo.login.entidades.Agenda;
 import ar.edu.unnoba.poo.login.entidades.Medico;
+import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.repositorios.RepositorioMedico;
 import ar.edu.unnoba.poo.login.util.Rol;
 import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;
@@ -49,7 +50,12 @@ public class ServicioMedico {
 			      .map(m -> {
 			        m.setMatricula(medico.getMatricula());
 			        m.setEspecialidades(medico.getEspecialidades());
-			        m.setUsuario(medico.getUsuario());
+			        Usuario usuario = m.getUsuario();
+			        if(!usuario.getEmail().equals(medico.getUsuario().getEmail())) {
+			        	m.setUsuario(medico.getUsuario());
+			        }
+			        usuario.setBloqueado(medico.getUsuario().getBloqueado());
+			        usuario.setContrasenia(encriptador.passwordEncrypt(medico.getUsuario().getContrasenia()));
 			        return repositorioMedico.save(m);
 			      })
 			      .orElseGet(() -> {

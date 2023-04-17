@@ -9,6 +9,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,10 +56,15 @@ public class ControladorPaciente {
 	   return "paciente/detalles";
 	}
 	
+	@PutMapping("/{id}")
+	public String cambiarEstado(@PathVariable Long id) {
+		servicioPaciente.cambiarEstado(id);
+		return "redirect:/paciente/{id}";
+	}
+	
 	@PutMapping("/editar/{id}")
-	public String modificar(@Valid Paciente paciente, @PathVariable Long id, Model model) {
+	public String modificar(@Valid @ModelAttribute("paciente") Paciente paciente, @PathVariable Long id, Model model) {
 	    servicioPaciente.modificar(paciente, id);
-	    model.addAttribute("pacientes", servicioPaciente.obtenerTodos());
 	    return "redirect:/paciente/inicio";
 	}
 }

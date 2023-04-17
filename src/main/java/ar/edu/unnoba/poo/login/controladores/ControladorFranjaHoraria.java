@@ -43,6 +43,7 @@ public class ControladorFranjaHoraria {
 		if(bindingResult.hasErrors()) {
 			return "franja-horaria/formulario";
 		}
+		franjaHoraria.setId(null);
 		franjaHoraria.setAgenda(servicioAgenda.obtenerPorId(id));
 		servicioFranjaHoraria.nueva(franjaHoraria);
 		return "redirect:/medico/inicio";

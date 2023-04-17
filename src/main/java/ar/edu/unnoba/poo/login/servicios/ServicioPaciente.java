@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ar.edu.unnoba.poo.login.entidades.Paciente;
+import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.repositorios.RepositorioPaciente;
 import ar.edu.unnoba.poo.login.util.Rol;
 import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;
@@ -40,6 +41,15 @@ public class ServicioPaciente {
 	
 	public Paciente obtenerPorDni(Long dni) {
 		return repositorioPaciente.findByDni(dni);
+	}
+	
+	public void cambiarEstado(Long id) {
+		repositorioPaciente.findById(id)
+		.map(p -> {
+			Usuario u = p.getUsuario();
+			u.setBloqueado(!u.getBloqueado());
+			return repositorioPaciente.save(p);
+		});
 	}
 	
 	public Paciente modificar(Paciente paciente, Long id) {
