@@ -2,7 +2,10 @@ package ar.edu.unnoba.poo.login.controladores;
 
 import javax.validation.Valid;
 
+import ar.edu.unnoba.poo.login.detallesUsuario.UsuarioLogueado;
+import ar.edu.unnoba.poo.login.repositorios.RepositorioTurno;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -31,8 +34,10 @@ public class ControladorMedico {
 	private ServicioMedico servicioMedico;
 	@Autowired
 	private ServicioEspecialidad servicioEspecialidad;
-//	@Autowired
-//	private ServicioAgenda servicioAgenda;
+	@Autowired
+	private ServicioAgenda servicioAgenda;
+	@Autowired
+	private RepositorioTurno repturno;
 	
 	@GetMapping("/{id}")
 	public String obtenerPorId(@PathVariable Long id, Model modelo) {
@@ -105,5 +110,14 @@ public class ControladorMedico {
 	public String eliminar(@PathVariable("id") Long id, Model modelo) {
 		servicioMedico.eliminar(id);
 		return "redirect:/medico/inicio";
+	}
+
+	@GetMapping("/historialconsultas")
+	public String obtenerPorId(Model model, @AuthenticationPrincipal UsuarioLogueado usuario) {
+		Medico m = servicioMedico.obtenerPorUsuario(usuario.getUsuario());
+		model.addAttribute("medico",m);
+		model.addAttribute("turnos", repturno.findAllByMedicoOrderByFecha(m) );
+
+		return "medico/historialconsultas";
 	}
 }

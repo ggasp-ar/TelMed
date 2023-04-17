@@ -3,6 +3,7 @@ package ar.edu.unnoba.poo.login.servicios;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import ar.edu.unnoba.poo.login.entidades.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +34,9 @@ public class ServicioPaciente {
 	
 	public Paciente obtenerPorId(Long id) {
 		return repositorioPaciente.findById(id).orElseThrow(() -> new NoSuchElementException());
+	}
+	public Paciente obtenerPorUsuario(Usuario u) {
+		return repositorioPaciente.findByUsuario(u);
 	}
 	
 	public Paciente obtenerPorDni(Long dni) {
