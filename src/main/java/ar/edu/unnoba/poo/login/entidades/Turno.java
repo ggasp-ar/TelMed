@@ -50,6 +50,14 @@ public class Turno {
 		this.agenda = agenda;
 	}
 
+	public Agenda getAgenda() {
+		return agenda;
+	}
+
+	public void setAgenda(Agenda agenda) {
+		this.agenda = agenda;
+	}
+
 	public Turno(Long id, LocalDate fecha, LocalDateTime horaInicio, Persona paciente, Persona medico, Agenda agenda) {
 		super();
 		this.id = id;

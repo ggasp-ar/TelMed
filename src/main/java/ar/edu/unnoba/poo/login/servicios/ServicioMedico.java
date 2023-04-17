@@ -3,6 +3,8 @@ package ar.edu.unnoba.poo.login.servicios;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import ar.edu.unnoba.poo.login.entidades.Paciente;
+import ar.edu.unnoba.poo.login.entidades.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +36,10 @@ public class ServicioMedico {
 	public Medico obtenerPorId(Long id) {
 		return repositorioMedico.findById(id).orElseThrow(() -> new NoSuchElementException("No se ha encontrado un medico con ID: " + id));
 	}
-	
+	public Medico obtenerPorUsuario(Usuario u) {
+		return repositorioMedico.findByUsuario(u);
+	}
+
 	public List<Medico> obtenerMedicosPorEspecialidad(String especialidad) {
 		return repositorioMedico.findMedicosByEspecialidad(especialidad);
 	}
