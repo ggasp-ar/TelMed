@@ -2,6 +2,7 @@ package ar.edu.unnoba.poo.login.controladores;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
@@ -13,8 +14,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
 import ar.edu.unnoba.poo.login.detallesUsuario.UsuarioLogueado;
+import ar.edu.unnoba.poo.login.entidades.Medico;
 import ar.edu.unnoba.poo.login.entidades.Paciente;
 import ar.edu.unnoba.poo.login.entidades.Usuario;
+import ar.edu.unnoba.poo.login.servicios.ServicioMedico;
 import ar.edu.unnoba.poo.login.servicios.ServicioPaciente;
 import ar.edu.unnoba.poo.login.servicios.ServicioUsuario;
 
@@ -24,9 +27,11 @@ public class HomeController {
 //	private ServicioUsuario servicioUsuario;
 	@Autowired
 	private ServicioPaciente servicioPaciente;
+	@Autowired
+	private ServicioMedico servicioMedico;
 
 	@GetMapping({"/","/home"})
-	public String index() {
+	public String home() {
 		return "home";
 	}
 	/*
@@ -48,6 +53,19 @@ public class HomeController {
 		//model.addAttribute("usuario", new Usuario());
 		modelo.addAttribute("paciente", paciente /*new Paciente()*/);
 		return "registro";
+	}
+	
+	@GetMapping("/inicio")
+	public String index(Model modelo) {
+		modelo.addAttribute("medicos", servicioMedico.obtenerTodos());
+		return "usuario/index";
+	}
+	
+	@GetMapping("/solicitar-turno/{id}")
+	public String solicitarTurno(@PathVariable Long id, Model modelo) {
+		Medico medico = servicioMedico.obtenerPorId(id);
+		modelo.addAttribute("medico", medico);
+		return "usuario/solicitar-turno";
 	}
 	
 	@PostMapping("/registro")

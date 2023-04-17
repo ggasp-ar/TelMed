@@ -15,6 +15,11 @@
      float: left;
 }
 
+.eliminar {
+    border: none;
+    background-color: transparent;
+}
+
 
 .btn a{
   text-decoration:none;

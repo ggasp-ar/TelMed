@@ -22,11 +22,11 @@ public class ControladorUsuario {
 	@Autowired
 	private ServicioUsuario servicioUsuario;
 	
-	@GetMapping("/inicio")
-	public String obtenerTodos(Model model) {
-		model.addAttribute("usuarios", servicioUsuario.obtenerTodos());
-		return "usuario/index";
-	}
+//	@GetMapping("/inicio")
+//	public String obtenerTodos(Model model) {
+//		model.addAttribute("usuarios", servicioUsuario.obtenerTodos());
+//		return "usuario/index";
+//	}
 	
 	@GetMapping("/{id}")
 	public String obtenerPorId(@PathVariable Long id, Model model) {
