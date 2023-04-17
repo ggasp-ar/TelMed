@@ -12,6 +12,9 @@
   <div class="container" style="padding-top:50px">
 
     <!--<p th:utext="'<strong>Rol: </strong> ' + ${medico.dni}">Rol</p> -->
+    <div class="row">
+        <h1 style="text-align: center"> Historial de Consultas</h1>
+    </div>
 
     <div class="row" th:if="${(turnos != null) and (!turnos.empty)}">
       <div class="col-sm-5 col-md-9">
@@ -37,7 +40,7 @@
       </div>
     </div>
     <div th:if="${(turnos == null) or (turnos.empty)}" class="alert alert-danger">
-      No hay turnos registrados.
+      No hay consultas registradas.
     </div>
   </div>
 </div>

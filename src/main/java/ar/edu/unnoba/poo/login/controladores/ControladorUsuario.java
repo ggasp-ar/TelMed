@@ -2,7 +2,12 @@ package ar.edu.unnoba.poo.login.controladores;
 
 import javax.validation.Valid;
 
+import ar.edu.unnoba.poo.login.detallesUsuario.UsuarioLogueado;
+import ar.edu.unnoba.poo.login.servicios.ServicioMedico;
+import ar.edu.unnoba.poo.login.servicios.ServicioPaciente;
+import ar.edu.unnoba.poo.login.util.Rol;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +26,10 @@ public class ControladorUsuario {
 
 	@Autowired
 	private ServicioUsuario servicioUsuario;
+	@Autowired
+	private ServicioMedico servicioMedico;
+	@Autowired
+	private ServicioPaciente servicioPaciente;
 	
 	@GetMapping("/inicio")
 	public String obtenerTodos(Model model) {
@@ -54,9 +63,32 @@ public class ControladorUsuario {
 		  return "redirect:/usuario/inicio";
 	}
 
+	@GetMapping("/perfil")
+	public String userProfile(Model model, @AuthenticationPrincipal UsuarioLogueado usuario) {
+		Usuario user = servicioUsuario.obtenerPorId(usuario.getUsuario().getId());
+		model.addAttribute("usuario", user);
+		Rol rol = usuario.getUsuario().getRol();
+
+		if (rol == Rol.ROLE_MEDIC) {
+			model.addAttribute("medico", servicioMedico.obtenerPorUsuario(user));
+		}
+		if (rol == Rol.ROLE_USER) {
+			model.addAttribute("paciente", servicioPaciente.obtenerPorUsuario(user));
+		}
+		return "usuario/perfil";
+	}
 	@GetMapping("/perfil/{id}")
 	public String userProfile(@PathVariable Long id, Model model) {
-		model.addAttribute("usuario", servicioUsuario.obtenerPorId(id));
+		Usuario user = servicioUsuario.obtenerPorId(id);
+		model.addAttribute("usuario", user);
+		Rol rol = user.getRol();
+
+		if (rol == Rol.ROLE_MEDIC) {
+			model.addAttribute("medico", servicioMedico.obtenerPorUsuario(user));
+		}
+		if (rol == Rol.ROLE_USER) {
+			model.addAttribute("paciente", servicioPaciente.obtenerPorUsuario(user));
+		}
 		return "usuario/perfil";
 	}
 }
