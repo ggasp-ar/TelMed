@@ -73,7 +73,7 @@
 <h1 class="text-center">Editar franja horaria</h1>
 <div class="franjaH">
 		
-<h3 th:text="'Agenda de:' + ${franjaHoraria.agenda.medico.nombre}"></h3>
+<h3 th:text="'Agenda de: ' + ${franjaHoraria.agenda.medico.nombre}"></h3>
  <div class="nuevafranjaH">
 	 <div th:if="${message}" class="alert alert-success">
 		<span th:text="${message}"></span>
@@ -81,10 +81,10 @@
      
     <form class="agenda" action="#" th:action="@{/franja-horaria/{id} (id=${franjaHoraria.id})}" th:method="put" th:object="${franjaHoraria}">
     	<label><h6>Hora de Inicio</h6></label>
-		<input type="time" th:field="*{horaInicio}" th:value="*{horaInicio}" step="600">
+		<input type="time" th:field="*{horaInicio}" th:value="*{horaInicio}" min="06:00" max="21:00" step="600">
 		
         <label><h6>Hora de Fin</h6></label>
-		<input type="time" th:field="*{horaFin}" th:value="*{horaFin}" step="600">
+		<input type="time" th:field="*{horaFin}" th:value="*{horaFin}" min="06:00" max="21:00" step="600">
 		
 		<div class="diasA">
 			<label><h6>Días de atención</h6></label>

@@ -92,82 +92,22 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="contenidoT">
-         <td >Nombre</td>
-         <td >DNI</td>
+    <tr class="contenidoT" th:each="franja : ${medico.agenda.franjasHorarias}">
+         <td><span th:each="dia : ${franja.diasAtencion}" th:text="${dia} + ' '"></span></td>
+         <td><span th:text="${franja.horaInicio} + ' - ' + ${franja.horaFin}"></span></td>
          <td>
-         	<form>
+         	<form th:action="@{/franja-horaria/editar/{id} (id=${franja.id})}" th:method="get">
 				<button class="modificar"><img
 			        class="reservado"
 			     src="static/img/editar.png"
 			     height="50"
 			     loading="lazy"
 			     role="button"
-			     href="#"
 			     th:src="@{/img/editar.png}"
-			     th:action="@{/home}"
 			    /> 
 				</button>
 			</form>
-         </td>
-        </tr>    
-    	<tr class="contenidoT">
-            <td >hola</td>
-            <td >chau</td>
-            <td>
-            	<form>
-				   	<button class="modificar"><img
-				           class="reservado"
-				        src="static/img/editar.png"
-				        height="50"
-				        loading="lazy"
-				        role="button"
-				        href="#"
-				        th:src="@{/img/editar.png}"
-				        th:action="@{/home}"
-				       /> 
-				   </button>
-				</form>
-            </td>
-          </tr>    
-          <tr class="contenidoT">
-           <td >Nombre</td>
-           <td >DNI</td>
-           <td>
-           	<form>
-			  	<button class="modificar"><img
-			          class="reservado"
-			       src="static/img/editar.png"
-			       height="50"
-			       loading="lazy"
-			       role="button"
-			       href="#"
-			       th:src="@{/img/editar.png}"
-			       th:action="@{/home}"
-			      /> 
-			   </button>
-   			</form>
-           </td>
-        </tr> 
-        <tr class="contenidoT">
-           <td >Nombre</td>
-           <td >DNI</td>
-           <td>
-           	<form>
-			  	<button class="modificar"><img
-			          class="reservado"
-			       src="static/img/editar.png"
-			       height="50"
-			       loading="lazy"
-			       role="button"
-			       href="#"
-			       th:src="@{/img/editar.png}"
-			       th:action="@{/home}"
-			      /> 
-			   </button>
-   			</form>
-           </td>
-        </tr>                          
+         </td>                    
   </tbody>
 </table>
 <br>

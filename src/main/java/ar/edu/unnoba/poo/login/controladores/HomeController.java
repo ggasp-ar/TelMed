@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -19,6 +20,7 @@ import org.springframework.validation.BindingResult;
 import ar.edu.unnoba.poo.login.detallesUsuario.UsuarioLogueado;
 import ar.edu.unnoba.poo.login.entidades.Medico;
 import ar.edu.unnoba.poo.login.entidades.Paciente;
+import ar.edu.unnoba.poo.login.entidades.Turno;
 import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.servicios.ServicioMedico;
 import ar.edu.unnoba.poo.login.servicios.ServicioPaciente;
@@ -35,6 +37,8 @@ public class HomeController {
 	private ServicioMedico servicioMedico;
 	@Autowired
 	private ServicioTurno servicioTurno;
+	@Autowired
+	private ControladorFranjaHoraria controladorFH;
 
 	@GetMapping({"/","/home"})
 	public String home() {
@@ -75,10 +79,23 @@ public class HomeController {
 	}
 	
 	@GetMapping(value="/solicitar-turno/{id}", params="fecha")
-	public String seleccionarFecha(@PathVariable Long id, @RequestParam("fecha") LocalDate fecha, Model modelo) {
-		// Validar que la fecha sea mayor o igual al día de hoy
-		modelo.addAttribute("turnos", servicioTurno.obtenerTurnosPorMedicoYFecha(id, fecha));
+	public String seleccionarFecha(@PathVariable Long id, @RequestParam("fecha") String fecha, Model modelo) {
+		Medico medico = servicioMedico.obtenerPorId(id);
+		LocalDate fechaSeleccionada = LocalDate.parse(fecha);
+		List<Turno> turnos = servicioTurno.turnosdisponibles(fechaSeleccionada, medico);
+		modelo.addAttribute("medico", medico);
+		modelo.addAttribute("turnos", turnos);
 		return "usuario/solicitar-turno";
+	}
+	
+	@PostMapping("/confirmar-turno")
+	public String confirmarTurno(@Valid @ModelAttribute("turno") Turno turno, 
+			@AuthenticationPrincipal UsuarioLogueado usuario, Model modelo) {
+		Paciente p = servicioPaciente.obtenerPorUsuario(usuario.getUsuario());
+		turno.setPaciente(p);
+		turno.setId(null);
+		servicioTurno.confirmarTurno(turno);
+		return "usuario/perfil";
 	}
 	
 	@PostMapping("/registro")

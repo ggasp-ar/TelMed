@@ -105,23 +105,21 @@
 					<tr>
 						<td>Fecha del turno:</td>
 						<td>
-							<form>
-							  <input class="date" type="date" name="fecha">
-							</form>
+							<input class="date" type="date" name="fecha">
 						</td>
 					</tr>
 				</tbody>
 			</table>
-		</form>
     </div>
     <div class="col-6">
       <input class="button cards1" type="submit" value="Solicitar turno"></input> 
     </div>
+	</form>
   </div>
 </div>
 <!-- ------------------------------------------------------------------------------ -->
 
-<div class="container" th:if="${(turnos != null) and (!turnos.empty)}">
+<div class="container" th:if="${(turnos != null)}">
   <div class="row">
     <div class="col-sm-5 col-md-6">
 		<table class="table table-striped">
@@ -135,6 +133,19 @@
 				<tr th:each="turno : ${turnos}">
 					<td class="hora" th:text="${turno.horaInicio}">Hora</td>
 		            <td>
+					<form action="#" th:action="@{/confirmar-turno}" th:method="post">
+						<button type="submit">
+							<img
+		              class="reservado"
+			          src="static/img/reservado.png"
+			          height="50"
+			          loading="lazy"
+			          role="button"
+			          th:src="@{/img/reservado.png}"
+			           />
+						</button>
+					</form>	
+					<!--
 		            <p class="cartel"><a href="#modal1" class="openModal"><img
 		              class="reservado"
 			          src="static/img/reservado.png"
@@ -146,6 +157,7 @@
 			          th:action="@{/home}"
 			           />
 			           </a></p>
+					   -->
 				</tr>
 				<!--
 		        <tr>
