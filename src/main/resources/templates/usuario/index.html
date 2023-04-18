@@ -73,14 +73,20 @@
       </a>
       <ul class="nav navbar-nav">
 			
-	        <li class="nav-item">
+	        <li sec:authorize="hasRole('ROLE_USER')" class="nav-item">
 	          <a class="nav-link" th:href="@{/paciente/historial-turnos}">Mis turnos</a>
 	        </li>
+			<li sec:authorize="hasRole('ROLE_MEDIC')" class="nav-item">
+				<a class="nav-link" th:href="@{/medico/historialconsultas}">Mis Consultas</a>
+			  </li>
 		</ul>
     </div>
     <!-- Right elements -->
     <div class="d-flex align-items-center">
 		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item">
+				<a class="nav-link"  href="#modal1">Administración</a>
+			</li>
 			<li class="nav-item">
 				<a th:href="@{/usuario/perfil}" class="nav-link" type="submit" value="Mi Perfil">Mi perfil</a>
 			</li>  
@@ -156,5 +162,48 @@
 	   		</div>
 		</div>
 	 </div> 
+	 <!-- MODAL -->
+	<div id="modal1" class="modalmask">
+	    <div class="modalbox movedown">
+	        <a href="#close" title="Close" class="close">X</a>
+	        <div>
+	        	<h2 class="confirmar">Administrar</h2>
+	        	<hr class="modalLinea">
+	        </div>
+	        
+<!-- 			MODAL INTERNO -->
+				<div class="user">
+                    <div class="form-wrap">
+                        <!-- TABS CONTENT -->
+                    	<div class="tabs-content">
+                            <!-- TABS CONTENT LOGIN -->
+                    		<div id="login-tab-content" class="active">
+                     		<div th:if="${message}" class="alert alert-success">
+					        	<span th:text="${message}"></span>
+					        </div>
+								<form>
+							        <ul class="modalAdmin">
+							        	<a class="modalAdmin" href="medico/index.html" th:href="@{/medico/inicio}">Administrar Médicos</a>
+							        	<br>
+							        	<br>
+										<!--
+							        	<a class="modalAdmin" href="usuario/index.html" th:href="@{/usuario/inicio}">Administrar Usuario</a>
+							        	<br>
+							        	<br>
+										-->
+							        	<a class="modalAdmin" href="paciente/index.html" th:href="@{/paciente/inicio}">Administrar Pacientes</a>
+							        	<br>
+							        	<br>
+							        	<a class="modalAdmin" href="especialidad/index.html" th:href="@{/especialidad/inicio}">Administrar Especialidades</a>
+							        </ul> 
+						        </form>                 			
+                    		</div>
+                    	</div>
+                	</div>
+                </div>
+            </div>
+        </div>
+	        
+<!-- END MODAL -->
  </body>
 </html>

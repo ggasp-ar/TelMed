@@ -82,19 +82,20 @@ public class HomeController {
 	public String seleccionarFecha(@PathVariable Long id, @RequestParam("fecha") String fecha, Model modelo) {
 		Medico medico = servicioMedico.obtenerPorId(id);
 		LocalDate fechaSeleccionada = LocalDate.parse(fecha);
+		Turno turno = new Turno();
 		List<Turno> turnos = servicioTurno.turnosdisponibles(fechaSeleccionada, medico);
 		modelo.addAttribute("medico", medico);
 		modelo.addAttribute("turnos", turnos);
+		modelo.addAttribute("turnoSeleccionado", turno);
 		return "usuario/solicitar-turno";
 	}
 	
 	@PostMapping("/confirmar-turno")
-	public String confirmarTurno(@Valid @ModelAttribute("turno") Turno turno, 
+	public String confirmarTurno(@ModelAttribute("turnoSeleccionado") Turno turnoSeleccionado, 
 			@AuthenticationPrincipal UsuarioLogueado usuario, Model modelo) {
 		Paciente p = servicioPaciente.obtenerPorUsuario(usuario.getUsuario());
-		turno.setPaciente(p);
-		turno.setId(null);
-		servicioTurno.confirmarTurno(turno);
+		turnoSeleccionado.setPaciente(p);
+		servicioTurno.confirmarTurno(turnoSeleccionado);
 		return "usuario/perfil";
 	}
 	
