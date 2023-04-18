@@ -107,9 +107,9 @@
                     	<form action="#" th:action="@{/paciente/{id}(id=${paciente.id})}" th:method="put">
 <!--                     	<form action="#" th:action="@{/paciente/{id} (id=${paciente.id})}" th:method="DELETE"> -->
 <!--              				<button class="btn btn-danger" type="submit">Eliminar</button> -->
-                        <button class="eliminar" type="submit">
+                        <button class="cambiar-estado" type="submit">
                           <img
-                            class="reservado"
+                            class="reservado cambiar"
                             height="50"
                             loading="lazy"
                             role="button"
@@ -130,9 +130,8 @@
 <!--             No hay pacientes registrados. -->
 <!--         </div> -->
 	<div class="col-6">
-      <form th:action="@{/hello}"method="GET">
-      	<input class="button cards" type="submit" value="Volver"></input> 
-<!--             <button type="sumbit" class="btn btn-primary mt-3">Volver</button> -->
+      <form th:action="@{/home}" th:method="get">
+      	<input class="button cards" type="submit" value="Volver"></input>
        </form>
     </div>
  

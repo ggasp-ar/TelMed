@@ -1,0 +1,250 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css");
+
+  .background-radial-gradient {
+      background-color: rgb(255, 255, 255);
+    }
+    
+   .btn {
+	  width: 160px;
+      height: 45px;
+      background-color: #0fa2aa;
+      margin: 5px;
+      padding: 10px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 25px;
+      font-size: 16px;
+      float: left;
+	}
+	
+	
+	.btn a{
+	  text-decoration:none;
+	  padding:5px 5px 5px 0;
+	}
+    
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: justify;
+	}
+    
+    hr {
+      margin-top: 1rem;
+    /* margin-left: 4rem; */
+    /* margin-right: 4rem; */
+    	border-top: 3px solid #07888f;
+	}
+	.hr2 {
+	  margin: 1em;
+	}
+	
+	.img-fluid {
+	  max-width: 100%;
+      height: auto;
+      margin-top: -19px;
+	}
+
+	.img-seccion {
+	  max-width: 21%;
+      height: auto;
+      margin: 0em 0 0 7em;
+	}
+	h1 {
+	  text-align: justify;
+	}
+	h5 {
+	  text-align: center;
+	}
+	
+	.secciones {
+	  text-align: center;
+	}
+
+.cards {
+	border-radius: 14px;
+    border: none;
+    height: 3em;
+    width: 6em;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 2em 2em 0 18em;
+    background-color: #0fa2aa;
+    border-color: #0fa2aa;
+}
+.cardM {
+	border-radius: 14px;
+    border: none;
+    height: 3em;
+    width: 6em;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 4em 2em 0 46em;
+    background-color: #0fa2aa;
+    border-color: #0fa2aa;
+}
+
+.item {
+	border: none;
+    background-color: #f8f9fa;
+    margin-top: -1px;
+}
+
+.campana {
+	height: 25px;
+    margin: 8px;
+}
+
+.notify {
+    position: relative;
+    top: -21px;
+    left: -0.1em;
+}
+.notify .heartbit {
+    position: absolute;
+    top: -20px;
+    right: -4px;
+    height: 25px;
+    width: 25px;
+    z-index: 10;
+    border: 5px solid #fc4b6c;
+    border-radius: 70px;
+    -moz-animation: heartbit 1s ease-out;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: heartbit 1s ease-out;
+    -o-animation-iteration-count: infinite;
+    -webkit-animation: heartbit 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.notify .point {
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #fc4b6c;
+    position: absolute;
+    right: 6px;
+    top: -10px;
+}
+@-moz-keyframes heartbit {
+	0% {
+		-moz-transform: scale(0);
+		opacity: 0.0
+	}
+	25% {
+		-moz-transform: scale(0.1);
+		opacity: 0.1
+	}
+	50% {
+		-moz-transform: scale(0.5);
+		opacity: 0.3
+	}
+	75% {
+		-moz-transform: scale(0.8);
+		opacity: 0.5
+	}
+	to {
+		-moz-transform: scale(1);
+		opacity: 0.0
+	}
+}
+@-webkit-keyframes heartbit {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0
+	}
+	25% {
+		-webkit-transform: scale(0.1);
+		opacity: 0.1
+	}
+	50% {
+		-webkit-transform: scale(0.5);
+		opacity: 0.3
+	}
+	75% {
+		-webkit-transform: scale(0.8);
+		opacity: 0.5
+	}
+	to {
+		-webkit-transform: scale(1);
+		opacity: 0.0
+	}
+}
+
+.franjaH {
+	margin: 4em 1em;
+    height: 5em;
+}
+.nuevafranjaH {
+	margin: 1em 1em;
+    height: 7em;
+}
+.agenda {
+	margin: 2em 1.5em
+}
+
+.title {
+    margin: 1em;
+}
+
+/* tabla */
+
+.table {
+	background-color: whitesmoke;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.row:nth-child(even) {
+	background-color: #dfdfdf;
+}
+
+.header .row {
+	padding: 16px;
+/* 	background-color: #0fa2aa; */
+}
+
+.header .row div {
+	display: flex;
+	justify-content: center;
+	font-weight: 600;
+	color: white;
+}
+
+.body .row {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.body .row div {
+	display: flex;
+	justify-content: center;
+}
+
+.contenidoT {
+	text-align: center;
+}
+
+.horaarribo {
+	width: 6em;
+    text-align: center;
+}
+.diasA {
+	margin: -2.3em 25em;
+}
+.reservado {
+    margin: 0em 0 0 0em;
+    height: 2em;
+}
+.modificar {
+    margin: 0em 0 0 0em;
+    height: 2em;
+    background-color: white;
+    border: none;
+}

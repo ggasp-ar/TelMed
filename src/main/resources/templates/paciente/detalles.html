@@ -16,7 +16,7 @@
    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   
    <!-- Nuestro css-->
-   <link rel="stylesheet" type="text/css" href="static/css/paciente/detalles.css" th:href="@{/css/paciente/detalle.css}">	
+   <link rel="stylesheet" type="text/css" href="static/css/paciente/detalles.css" th:href="@{/css/paciente/detalles.css}">	
 </head>
 <body>
 
@@ -101,7 +101,10 @@
   </div>
 </div>
   
-<a href="#" th:href="@{/paciente/inicio}" class="btn btn-secondary ml-3">Volver</a> 
-<!--             <button type="sumbit" class="btn btn-primary mt-3">Volver</button> -->
+<div class="col-6">
+  <form th:action="@{/paciente/inicio}" th:method="get">
+    <input class="button cards" type="submit" value="Volver"></input>
+   </form>
+</div>
 </body>
 </html>

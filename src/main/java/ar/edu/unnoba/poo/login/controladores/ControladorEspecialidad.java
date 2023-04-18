@@ -24,15 +24,16 @@ public class ControladorEspecialidad {
 	
 	@GetMapping("/inicio")
 	public String inicio(Model modelo) {
+		modelo.addAttribute("especialidad", new Especialidad());
 		modelo.addAttribute("especialidades", servicioEspecialidad.obtenerTodas());
 		return "especialidad/index";
 	}
 	
-	@GetMapping("/nueva")
-	public String nueva(Model modelo) {
-		modelo.addAttribute("especialidad", new Especialidad());
-		return "especialidad/formulario";
-	}
+//	@GetMapping("/nueva")
+//	public String nueva(Model modelo) {
+//		modelo.addAttribute("especialidad", new Especialidad());
+//		return "especialidad/formulario";
+//	}
 	
 	@GetMapping("/editar/{id}")
 	public String modificar(@PathVariable Long id, Model modelo) {

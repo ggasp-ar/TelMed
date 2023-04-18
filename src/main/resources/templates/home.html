@@ -52,37 +52,78 @@
     </div>
     <!-- Right elements -->
     <div class="d-flex align-items-center">
-     <form th:action="@{/logout}" method="post">
-    	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item">
-	          <a class="nav-link" href="#">Información</a>
-	        </li>
-			<li>
-				
+     
+    	<ul class="navbar-nav me-auto mb-2 mb-lg-0">				
 			</li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">Contacto</a>
+	          <a class="nav-link"  href="#modal1">Administración</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#">Términos y condiciones</a>
+	          <a class="nav-link" th:href="@{/inicio}">Turnos</a>
 	        </li>
 	        <li sec:authorize="isAuthenticated()" class="nav-item">
-	          <button class="nav-item item">
-	          	<a class="nav-link" type="submit" value="Cerrar Sesion">Cerrar Sesion</a>
-	          </button>
+				<form th:action="@{/logout}" method="post">
+					<button class="nav-item item">
+						<a class="nav-link" type="submit" value="Cerrar Sesion">Cerrar Sesión</a>
+					</button>
+				</form>
 	        </li> 	
-	          <!--<div th:if="${message}" class="alert alert-success">
-					        	<span th:text="${message}"></span>
-					        </div>-->
+	        <div th:if="${message}" class="alert alert-success">
+		        <span th:text="${message}"></span> 
+	        </div> 
 <!-- 			          <li class="nav-item"> -->
 <!-- 			            <a class="nav-link" th:href="@{/hello}">Logout</a> -->
 <!-- 			          </li> -->
         </ul>
-      </form>
     </div>
   </div>
 </nav> 	
 <!-- Navbar -->
+
+
+<!-- MODAL -->
+	<div id="modal1" class="modalmask">
+	    <div class="modalbox movedown">
+	        <a href="#close" title="Close" class="close">X</a>
+	        <div>
+	        	<h2 class="confirmar">Administrar</h2>
+	        	<hr class="modalLinea">
+	        </div>
+	        
+<!-- 			MODAL INTERNO -->
+				<div class="user">
+                    <div class="form-wrap">
+                        <!-- TABS CONTENT -->
+                    	<div class="tabs-content">
+                            <!-- TABS CONTENT LOGIN -->
+                    		<div id="login-tab-content" class="active">
+                     		<div th:if="${message}" class="alert alert-success">
+					        	<span th:text="${message}"></span>
+					        </div>
+								<form>
+							        <ul class="modalAdmin">
+							        	<a class="modalAdmin" href="medico/index.html" th:href="@{/medico/inicio}">Administrar Médicos</a>
+							        	<br>
+							        	<br>
+										<!--
+							        	<a class="modalAdmin" href="usuario/index.html" th:href="@{/usuario/inicio}">Administrar Usuario</a>
+							        	<br>
+							        	<br>
+										-->
+							        	<a class="modalAdmin" href="paciente/index.html" th:href="@{/paciente/inicio}">Administrar Pacientes</a>
+							        	<br>
+							        	<br>
+							        	<a class="modalAdmin" href="especialidad/index.html" th:href="@{/especialidad/inicio}">Administrar Especialidades</a>
+							        </ul> 
+						        </form>                 			
+                    		</div>
+                    	</div>
+                	</div>
+                </div>
+            </div>
+        </div>
+	        
+<!-- END MODAL -->
     	
     	<!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">

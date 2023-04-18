@@ -4,6 +4,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.time.LocalDate;
 
 import javax.validation.Valid;
 
@@ -19,6 +22,7 @@ import ar.edu.unnoba.poo.login.entidades.Paciente;
 import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.servicios.ServicioMedico;
 import ar.edu.unnoba.poo.login.servicios.ServicioPaciente;
+import ar.edu.unnoba.poo.login.servicios.ServicioTurno;
 import ar.edu.unnoba.poo.login.servicios.ServicioUsuario;
 
 @Controller
@@ -29,6 +33,8 @@ public class HomeController {
 	private ServicioPaciente servicioPaciente;
 	@Autowired
 	private ServicioMedico servicioMedico;
+	@Autowired
+	private ServicioTurno servicioTurno;
 
 	@GetMapping({"/","/home"})
 	public String home() {
@@ -65,6 +71,13 @@ public class HomeController {
 	public String solicitarTurno(@PathVariable Long id, Model modelo) {
 		Medico medico = servicioMedico.obtenerPorId(id);
 		modelo.addAttribute("medico", medico);
+		return "usuario/solicitar-turno";
+	}
+	
+	@GetMapping(value="/solicitar-turno/{id}", params="fecha")
+	public String seleccionarFecha(@PathVariable Long id, @RequestParam("fecha") LocalDate fecha, Model modelo) {
+		// Validar que la fecha sea mayor o igual al día de hoy
+		modelo.addAttribute("turnos", servicioTurno.obtenerTurnosPorMedicoYFecha(id, fecha));
 		return "usuario/solicitar-turno";
 	}
 	

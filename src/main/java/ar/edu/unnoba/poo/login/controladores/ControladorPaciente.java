@@ -42,7 +42,7 @@ public class ControladorPaciente {
 	   return "paciente/detalles";
 	}
 
-	@GetMapping("/historialturnos")
+	@GetMapping("/historial-turnos")
 	public String obtenerPorId(Model model, @AuthenticationPrincipal UsuarioLogueado usuario) {
 		Paciente p = servicioPaciente.obtenerPorUsuario(usuario.getUsuario());
 		model.addAttribute("paciente",p);
