@@ -33,7 +33,9 @@ public class ControladorFranjaHoraria {
 	
 	@GetMapping("/editar/{id}")
 	public String editar(@PathVariable Long id, Model modelo) {
-		modelo.addAttribute("franjaHoraria", servicioFranjaHoraria.obtenerPorId(id));
+		FranjaHoraria franjaHoraria = servicioFranjaHoraria.obtenerPorId(id);
+		modelo.addAttribute("franjaHoraria", franjaHoraria);
+		System.out.println(franjaHoraria.toString());
 		modelo.addAttribute("dias", Dia.values());
 		return "franja-horaria/formulario";
 	}

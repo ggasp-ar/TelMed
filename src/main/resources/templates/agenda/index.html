@@ -50,23 +50,24 @@
         <h4>TELMED</h4>
         </a>
       </a>
-
     </div>
     <!-- Right elements -->
     <div class="d-flex align-items-center">
      <form th:action="@{/logout}" method="post">
-	    	<ul class="navbar-nav me-auto mb-2 mb-lg-0">	    	 
-		        <li class="nav-item">
-		          <button class="nav-item item">
-		          	<a class="nav-link" type="submit" value="Cerrar Sesion">Cerrar Sesion</a>
-		          </button>
-		        </li> 					
-	        </ul>
-	    </form>
+    	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <button class="nav-item item">
+	          	<a class="nav-link" type="submit" value="Cerrar Sesion">Cerrar Sesión</a>
+	          </button>
+	        </li> 	
+	        <div th:if="${message}" class="alert alert-success">
+ 				<span th:text="${message}"></span>
+			</div> 
+        </ul>
+      </form>
     </div>
   </div>
-</nav> 	 	
-
+</nav> 	
 <!-- fin nav -->
 
 <div class="title h1 text-center" th:text="'Adenda de ' + ${medico.nombre}"></div>
@@ -74,54 +75,112 @@
 <div th:if="${message}" class="alert alert-success">
 	<span th:text="${message}"></span>
 </div>
-	<div class="franjaH">
+
+<div class="franjaH">
         <h3>Franjas horarias</h3>
         <hr>
         	<div class="header">
 			  <div class="row">
 <!-- 			    <div class="col-sm-5 col-md-6"> -->
+					
 					<table>
-		                <thead class="contenidoT">
-		                    <th>Días</th>
-		                    <th>Horarios</th>
-		                    <th>Modificar</th>
-		                </thead>
-		               
-		                <tbody> 
-		                	<tr th:each="franja : ${medico.agenda.franjasHorarias}" class="contenidoT">
-			                    <td><span th:each="dia : ${franja.diasAtencion}" th:text="${dia}" class="mr-1"></span></td>
-			                    <td th:text="${franja.horaInicio} + ' - ' + ${franja.horaFin}"></td>
-			                    <td>
-			                    	<form th:action="@{/franja-horaria/editar/{id} (id=${franja.id})}" th:method="get">
-								      	<button class="modificar"><img
-								              class="reservado"
-									          src="static/img/editar.png"
-									          height="50"
-									          loading="lazy"
-									          role="button"
-									          href="#"
-									          th:src="@{/img/editar.png}"
-									          th:action="@{/home}"
-									         /> 
-									     </button>
-							          </form>
-			                    </td>
-		                    <tr>                  
-		                </tbody>
-			         </table>
-<!-- 			      </div> -->
-			   </div>
-   			</div>
-	</div>
-	<hr class="hr2">
-	<div class="nuevafranjaH">
+  <thead class="contenidoT">
+    <tr>
+      <th>Días</th>
+      <th>Horarios</th>
+      <th>Modificar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="contenidoT">
+         <td >Nombre</td>
+         <td >DNI</td>
+         <td>
+         	<form>
+				<button class="modificar"><img
+			        class="reservado"
+			     src="static/img/editar.png"
+			     height="50"
+			     loading="lazy"
+			     role="button"
+			     href="#"
+			     th:src="@{/img/editar.png}"
+			     th:action="@{/home}"
+			    /> 
+				</button>
+			</form>
+         </td>
+        </tr>    
+    	<tr class="contenidoT">
+            <td >hola</td>
+            <td >chau</td>
+            <td>
+            	<form>
+				   	<button class="modificar"><img
+				           class="reservado"
+				        src="static/img/editar.png"
+				        height="50"
+				        loading="lazy"
+				        role="button"
+				        href="#"
+				        th:src="@{/img/editar.png}"
+				        th:action="@{/home}"
+				       /> 
+				   </button>
+				</form>
+            </td>
+          </tr>    
+          <tr class="contenidoT">
+           <td >Nombre</td>
+           <td >DNI</td>
+           <td>
+           	<form>
+			  	<button class="modificar"><img
+			          class="reservado"
+			       src="static/img/editar.png"
+			       height="50"
+			       loading="lazy"
+			       role="button"
+			       href="#"
+			       th:src="@{/img/editar.png}"
+			       th:action="@{/home}"
+			      /> 
+			   </button>
+   			</form>
+           </td>
+        </tr> 
+        <tr class="contenidoT">
+           <td >Nombre</td>
+           <td >DNI</td>
+           <td>
+           	<form>
+			  	<button class="modificar"><img
+			          class="reservado"
+			       src="static/img/editar.png"
+			       height="50"
+			       loading="lazy"
+			       role="button"
+			       href="#"
+			       th:src="@{/img/editar.png}"
+			       th:action="@{/home}"
+			      /> 
+			   </button>
+   			</form>
+           </td>
+        </tr>                          
+  </tbody>
+</table>
+<br>
+
+<!-- 	<hr class="hr2"> -->
+<div class="nuevafranjaH">
         <h3>Nueva franja horaria</h3>
         
             <form class="agenda" action="#" th:action="@{/franja-horaria/nueva/{id} (id=${medico.agenda.id})}" th:method="POST" th:object="${franjaHoraria}">
             <label><h6>Hora de Inicio</h6></label>
 <!--             <input type="text" th:field="*{horaInicio}" th:value="*{horaInicio}"/> -->
 			<input type="time" th:field="*{horaInicio}" th:value="*{horaInicio}" class="horaarribo" step="600">
-			
+      <br>
             <label><h6>Hora de Fin</h6></label>
 <!--             <input type="text" th:field="*{horaFin}" th:value="*{horaFin}"/> -->
 			<input type="time" th:field="*{horaFin}" th:value="*{horaFin}" class="horaarribo" step="600">
@@ -132,19 +191,12 @@
 					<label th:text="${dia}"></label>
 					<input type="checkbox" name="dias-atencion" id="dias-atencion" th:field="*{diasAtencion}" th:value="${dia}">
             	</div>
-
+			</div>
             <div class="col-6">
-		      <form>
-		      	<input class="button cards" type="submit" value="Confirmar"></input> 
-              </form>
+		      	  <input class="button cards" type="submit" value="Confirmar"></input> 
             </div>
 
         </form>
 	</div>
-	<div class="col-6">
-		<form th:action="@{/home}" th:method="get">
-		<input class="button cards" type="submit" value="Volver"></input>
-		</form>
-	</div>
- </body>
+    </body>
 </html>
