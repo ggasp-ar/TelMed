@@ -6,17 +6,13 @@ import java.util.NoSuchElementException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ar.edu.unnoba.poo.login.entidades.Agenda;
 import ar.edu.unnoba.poo.login.entidades.FranjaHoraria;
-import ar.edu.unnoba.poo.login.repositorios.RepositorioAgenda;
 import ar.edu.unnoba.poo.login.repositorios.RepositorioFranjaHoraria;
 
 @Service
 public class ServicioFranjaHoraria {
 	@Autowired
 	private RepositorioFranjaHoraria repositorioFranjaHoraria;
-	@Autowired
-	private RepositorioAgenda repositorioAgenda;
 	
 	public ServicioFranjaHoraria() {
 		super();
@@ -35,11 +31,6 @@ public class ServicioFranjaHoraria {
 	}
 	
 	public FranjaHoraria nueva(FranjaHoraria franjaHoraria) {
-		//Agenda agenda = repositorioAgenda.findById(franjaHoraria.getAgenda().getId()).orElseThrow(() -> new NoSuchElementException("No se ha encontrado una Agenda con ID: " + franjaHoraria.getAgenda().getId()));
-		//FranjaHoraria nuevaFranjaHoraria = repositorioFranjaHoraria.save(franjaHoraria);
-		//agenda.addFranjaHoraria(nuevaFranjaHoraria);
-		//repositorioAgenda.save(agenda);
-		//return nuevaFranjaHoraria;
 		return repositorioFranjaHoraria.save(franjaHoraria);
 	}
 	

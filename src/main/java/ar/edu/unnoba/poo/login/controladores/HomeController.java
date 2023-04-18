@@ -25,31 +25,21 @@ import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.servicios.ServicioMedico;
 import ar.edu.unnoba.poo.login.servicios.ServicioPaciente;
 import ar.edu.unnoba.poo.login.servicios.ServicioTurno;
-import ar.edu.unnoba.poo.login.servicios.ServicioUsuario;
 
 @Controller
 public class HomeController {
-//	@Autowired
-//	private ServicioUsuario servicioUsuario;
 	@Autowired
 	private ServicioPaciente servicioPaciente;
 	@Autowired
 	private ServicioMedico servicioMedico;
 	@Autowired
 	private ServicioTurno servicioTurno;
-	@Autowired
-	private ControladorFranjaHoraria controladorFH;
 
 	@GetMapping({"/","/home"})
 	public String home() {
 		return "home";
 	}
-	/*
-	@GetMapping("/hello")
-	public String menu(@AuthenticationPrincipal UsuarioLogueado usuario) {
-		return "hello";
-	}
-	*/
+	
 	@GetMapping("/login")
 	public String login() {
 		return "login";
@@ -60,8 +50,7 @@ public class HomeController {
 		Usuario usuario = new Usuario();
 		Paciente paciente = new Paciente();
 		paciente.setUsuario(usuario);
-		//model.addAttribute("usuario", new Usuario());
-		modelo.addAttribute("paciente", paciente /*new Paciente()*/);
+		modelo.addAttribute("paciente", paciente);
 		return "registro";
 	}
 	
@@ -100,14 +89,12 @@ public class HomeController {
 	}
 	
 	@PostMapping("/registro")
-	public String registro(/*@Valid Usuario usuario,*/ @Valid @ModelAttribute("paciente") Paciente paciente, BindingResult bindingResult, Model modelo) {
-		//Usuario nuevoUsuario = servicioUsuario.nuevo(usuario, Roles.ROLE_USER);
-		//paciente.setUsuario(nuevoUsuario);
+	public String registro(@Valid @ModelAttribute("paciente") Paciente paciente, BindingResult bindingResult, Model modelo) {
 		if(bindingResult.hasErrors()) {
 			return "registro";
 		}
 		servicioPaciente.nuevo(paciente);
-		//modelo.addAttribute("message", "Usuario registrado correctamente.");
+		
 		return "login";
 	}
 }

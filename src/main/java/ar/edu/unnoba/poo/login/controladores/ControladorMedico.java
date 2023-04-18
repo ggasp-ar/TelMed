@@ -16,13 +16,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import ar.edu.unnoba.poo.login.entidades.Agenda;
 import ar.edu.unnoba.poo.login.entidades.FranjaHoraria;
 import ar.edu.unnoba.poo.login.entidades.Medico;
 import ar.edu.unnoba.poo.login.entidades.Usuario;
-import ar.edu.unnoba.poo.login.servicios.ServicioAgenda;
 import ar.edu.unnoba.poo.login.servicios.ServicioEspecialidad;
 import ar.edu.unnoba.poo.login.servicios.ServicioMedico;
 import ar.edu.unnoba.poo.login.util.Dia;
@@ -34,8 +31,6 @@ public class ControladorMedico {
 	private ServicioMedico servicioMedico;
 	@Autowired
 	private ServicioEspecialidad servicioEspecialidad;
-	@Autowired
-	private ServicioAgenda servicioAgenda;
 	@Autowired
 	private RepositorioTurno repturno;
 	
@@ -57,28 +52,6 @@ public class ControladorMedico {
 		return "medico/index";
 	}
 	
-//	@GetMapping("/nuevo")
-//	public String nuevo(Model modelo) {
-//		Usuario usuario = new Usuario();
-//		Medico medico = new Medico();
-//		Agenda agenda = new Agenda();
-//		medico.setUsuario(usuario);
-//		medico.setAgenda(agenda);
-//		modelo.addAttribute("medico", medico/*new Medico()*/);
-//		modelo.addAttribute("especialidades", servicioEspecialidad.obtenerTodas());
-//		//modelo.addAttribute("usuario", new Usuario());
-//		return "medico/formulario";
-//	}
-	
-//	@GetMapping("/editar/{id}")
-//	public String editar(@PathVariable Long id, Model modelo) {
-//		Medico medico = servicioMedico.obtenerPorId(id);
-//		//Usuario usuario = medico.getUsuario();
-//		modelo.addAttribute("medico", medico);
-//		//modelo.addAttribute("usuario", usuario);
-//		return "medico/formulario";
-//	}
-	
 	@GetMapping("agenda/{id}")
 	public String agenda(@PathVariable Long id, Model modelo) {
 		modelo.addAttribute("medico", servicioMedico.obtenerPorId(id));
@@ -91,8 +64,6 @@ public class ControladorMedico {
 	public String nuevo(@Valid @ModelAttribute("nuevoMedico") Medico nuevoMedico/*, @Valid Usuario usuario*/, Model modelo) {
 		servicioMedico.nuevo(nuevoMedico);
 		return "redirect:/medico/inicio";
-//		return "redirect:/medico/agenda/" + medico.getId();
-//		return "redirect:/medico/agenda";
 	}
 	
 	@PutMapping("/{id}")

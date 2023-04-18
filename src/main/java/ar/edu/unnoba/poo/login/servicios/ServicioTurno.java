@@ -11,11 +11,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
 import ar.edu.unnoba.poo.login.entidades.FranjaHoraria;
 import ar.edu.unnoba.poo.login.entidades.Medico;

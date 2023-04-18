@@ -3,14 +3,12 @@ package ar.edu.unnoba.poo.login.servicios;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import ar.edu.unnoba.poo.login.entidades.Paciente;
 import ar.edu.unnoba.poo.login.entidades.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ar.edu.unnoba.poo.login.entidades.Agenda;
 import ar.edu.unnoba.poo.login.entidades.Medico;
-import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.repositorios.RepositorioMedico;
 import ar.edu.unnoba.poo.login.util.Rol;
 import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;

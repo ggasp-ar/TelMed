@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="turnos")
@@ -25,8 +23,6 @@ public class Turno {
 	private LocalDate fecha;
 	@Column(name="hora_inicio", nullable=false)
 	private LocalDateTime horaInicio;
-//	@Column(name="hora_fin", nullable=false)
-//	private LocalDateTime horaFin;
 	@ManyToOne(optional=false)
 	@JoinColumn(name="paciente_id", nullable=false, updatable=false)
 	private Persona paciente;
@@ -91,14 +87,6 @@ public class Turno {
 	public void setHoraInicio(LocalDateTime horaInicio) {
 		this.horaInicio = horaInicio;
 	}
-	
-//	public LocalDateTime getHoraFin() {
-//		return horaFin;
-//	}
-//
-//	public void setHoraFin(LocalDateTime horaFin) {
-//		this.horaFin = horaFin;
-//	}
 
 	public Persona getPaciente() {
 		return paciente;

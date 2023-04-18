@@ -2,7 +2,6 @@ package ar.edu.unnoba.poo.login.repositorios;
 
 import java.util.List;
 
-import ar.edu.unnoba.poo.login.entidades.Paciente;
 import ar.edu.unnoba.poo.login.entidades.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

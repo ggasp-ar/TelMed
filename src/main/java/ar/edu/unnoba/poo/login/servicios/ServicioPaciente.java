@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ar.edu.unnoba.poo.login.entidades.Paciente;
-import ar.edu.unnoba.poo.login.entidades.Usuario;
 import ar.edu.unnoba.poo.login.repositorios.RepositorioPaciente;
 import ar.edu.unnoba.poo.login.util.Rol;
 import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;

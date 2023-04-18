@@ -8,7 +8,6 @@ import ar.edu.unnoba.poo.login.util.Rol;
 import ar.edu.unnoba.poo.login.util.encriptador.EncriptadorInterface;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
@@ -28,7 +27,7 @@ public class ServicioUsuario {
 	
 	public Usuario nuevo(Usuario usuario, Rol rol) {
 		usuario.setBloqueado(true);
-		usuario.setRol(rol/*.name()*/);
+		usuario.setRol(rol);
 		usuario.setContrasenia(encriptador.passwordEncrypt(usuario.getContrasenia()));
 	    return repositorioUsuario.save(usuario);
 	}
@@ -42,7 +41,6 @@ public class ServicioUsuario {
 	      .map(u -> {
 	        u.setEmail(usuario.getEmail());
 	        u.setContrasenia(encriptador.passwordEncrypt(usuario.getContrasenia()));
-//	        u.setNombre(usuario.getNombre());
 	        u.setRol(usuario.getRol());
 	        return repositorioUsuario.save(u);
 	      })
