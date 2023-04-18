@@ -8,24 +8,26 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import  ar.edu.unnoba.poo.login.services.UserDetailsServiceImpl;
+
+import ar.edu.unnoba.poo.login.servicios.ServicioDetallesUsaurioImpl;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
-	private UserDetailsServiceImpl userDetailsService;
+	private ServicioDetallesUsaurioImpl userDetailsService;
 	
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/", "/home").permitAll()
+                .antMatchers("/", "/home","/registro","/img/**","/css/**","/usertest").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
                 .loginPage("/login")
+                .defaultSuccessUrl("/inicio", true)
                 .permitAll()
                 .and()
             .logout()

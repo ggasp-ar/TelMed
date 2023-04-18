@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial Usuarios</title>
+  <!-- Nuestro css-->
+  <link rel="stylesheet" type="text/css" href="static/css/medico/index.css" th:href="@{/css/medico/index.css}">
+
+</head>
+<body>
+<div th:insert="navbar :: navbar">  </div>
+  <div class="container" style="padding-top:50px">
+
+    <!--<p th:utext="'<strong>Rol: </strong> ' + ${medico.dni}">Rol</p> -->
+    <div class="row">
+        <h1 style="text-align: center"> Historial de Consultas</h1>
+    </div>
+
+    <div class="row" th:if="${(turnos != null) and (!turnos.empty)}">
+      <div class="col-sm-5 col-md-9">
+        <table class="table table-striped">
+        <tr>
+          <th>Fecha</th>
+          <th>Hora de Inicio</th>
+          <th>Hora de Fin</th>
+          <th>Paciente</th>
+          <th>Enlace</th>
+        </tr>
+        <tr th:each="t : ${turnos}">
+          <td th:text="${t.fecha}">Fecha</td>
+          <td th:text="${t.horaInicio.toLocalTime()}">Inicio</td>
+          <td th:text="${t.horaInicio.toLocalTime()}">Fin</td>
+          <td th:text="${t.paciente.nombre}">Paciente</td>
+          <!-- <td th:text="${t.horaInicio}">Enlace</td> -->
+          <td>
+            <a href="https://localhost">Meet</a>
+          </td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    <div th:if="${(turnos == null) or (turnos.empty)}" class="alert alert-danger">
+      No hay consultas registradas.
+    </div>
+  </div>
+</div>
+<div th:insert="navbar :: bootstrap"></div>
+</body>
+</html>

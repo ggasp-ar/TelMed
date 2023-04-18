@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="static/css/perfil.css" th:href="@{/css/usuario/perfil.css}">
+</head>
+<body>
+<div th:insert="navbar :: navbar">  </div>
+<div class="container" style="padding-top:50px">
+    <div class="row" style="box-shadow: 5px 10px; padding:30px; border-style:solid; border-radius: 15px;border-width: thin">
+        <div class="col-md-4">
+            <div id="pic">
+                <img
+                    src="static/img/perfil-del-usuario.png"
+                    height="100%"
+                    loading="lazy"
+                    th:src="@{/img/perfil-del-usuario.png}"
+                    style="transform: scale(3,3);transform-origin: center center;"
+                />
+            </div>
+            <div th:switch="${usuario.rol.name()}">
+                <h2 th:case="ROLE_ADMIN">Admin</h2>
+                <h2 th:case="ROLE_MEDIC" th:utext="${medico.nombre}">Medico</h2>
+                <h2 th:case="ROLE_USER" th:utext="${paciente.nombre}">Paciente</h2>
+                </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <h3>Datos de usuario</h3>
+
+                <p th:utext="'<strong>Email: </strong> ' + ${usuario.email}">Especialidad</p>
+
+                <p th:utext="'<strong>Rol: </strong> ' + ${usuario.rol}">Rol</p>
+            </div>
+            <div th:switch="${usuario.rol.name()}">
+                <p th:case="ROLE_ADMIN">Admin</p>
+                <div th:case="ROLE_MEDIC">
+                    <h3> Datos del Medico </h3>
+                    <p th:utext="'<strong>Nombre: </strong> ' + ${medico.getNombre()}">Nombre: </p>
+                    <p th:utext="'<strong>DNI: </strong> ' + ${medico.getDni()}">DNI: </p>
+                    <p th:utext="'<strong>Matricula: </strong> ' + ${medico.getMatricula()}">Matricula: </p>
+                    <h3 >Especialidades: </h3>
+                    <li th:each="e : ${medico.getEspecialidades()}" th:text="${e.nombre}"></li>
+
+                </div>
+                <div th:case="ROLE_USER">
+                    <h3> Datos del Paciente </h3>
+                    <p th:utext="'<strong>DNI: </strong> ' + ${paciente.dni}">DNI: </p>
+                    <p th:utext="'<strong>Consultas Realizadas: </strong> ' + ${paciente.getTurnos().size()}">Consultas Realizadas: </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="navbar :: bootstrap"></div>
+</body>
+</html>
