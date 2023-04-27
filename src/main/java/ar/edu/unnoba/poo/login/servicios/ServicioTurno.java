@@ -57,6 +57,24 @@ public class ServicioTurno {
 		repositorioTurno.save(turno);
 	}
 	
+	public void eliminarTurno(Long id) {
+		if(validaFechaPorIdTurno(id, LocalDateTime.now())) {
+			repositorioTurno.deleteById(id);
+		}else {
+			throw new RuntimeException("El turno tiene fecha de inicio menor a la fecha actual");
+		}
+	}
+	
+	public boolean validaFechaPorIdTurno(Long idTurno, LocalDateTime fechaActual) {
+		List<Turno> turnos = repositorioTurno.findAll();
+		for(Turno turno: turnos) {
+			if((turno.getId() == idTurno) && (turno.getHoraInicio().isAfter(fechaActual))) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public List<Turno> turnosdisponibles(LocalDate dt, Medico med){
 
 		Map<String, Dia> mapatodia = new HashMap<>();

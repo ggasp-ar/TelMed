@@ -211,7 +211,7 @@ public class TestController {
         int diff;
         Medico m = repmedico.findByMatricula((long)123182301);
 
-        List<Turno> asd = cfh.turnosdisponibles(dt.toLocalDate(),m);
+//        List<Turno> asd = cfh.turnosdisponibles(dt.toLocalDate(),m);
 
         /*
         List<Turno> turnos_oc = repturno.findAllByFecha(dt.toLocalDate());
