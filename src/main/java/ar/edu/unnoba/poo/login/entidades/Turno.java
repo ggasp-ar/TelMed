@@ -103,7 +103,13 @@ public class Turno {
 	public void setMedico(Persona medico) {
 		this.medico = medico;
 	}
-
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException{
+		Turno turno = new Turno(this.fecha, this.horaInicio, this.paciente, this.medico, this.agenda);
+		return turno;
+	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
