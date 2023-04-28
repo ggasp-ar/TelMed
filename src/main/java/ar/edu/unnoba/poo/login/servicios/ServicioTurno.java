@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -77,6 +78,36 @@ public class ServicioTurno {
 		}else {
 			return false;
 		}
+	}
+	
+	
+	public void clonarTurnoSemanaSiguiente(Long idTurno) throws CloneNotSupportedException{
+		Turno turno = repositorioTurno.findById(idTurno).orElseThrow(()-> new NoSuchElementException("No se encontró turno con id: "+idTurno));
+		// Valida que no exista un turno en la proxima semana a la misma hora y con el mismo médico
+		if (!existeTurno(turno.getMedico().getId(), (turno.getFecha().plusDays(7)), turno.getHoraInicio().plusDays(7))){
+		
+			Turno nuevoTurno = (Turno)turno.clone();
+			nuevoTurno.setFecha(turno.getFecha().plusDays(7));
+			nuevoTurno.setHoraInicio(turno.getHoraInicio().plusDays(7)); // ademas de la fecha, tambien le agrego 7 días a la hora de inicio ya que es un LocalDateTime
+			repositorioTurno.save(nuevoTurno);
+				
+		} else {
+            throw new CloneNotSupportedException("Ya existe un turno reservado en la misma fecha y hora."); // Excepcion para que no permita crear dos turnos iguales
+        }
+		
+	}
+	
+	public boolean existeTurno(Long idMedico, LocalDate fecha, LocalDateTime horaInicio) {
+	    // Busca en la base de datos los turnos con la misma fecha y médico
+	    List<Turno> turnosExistentes = obtenerTurnosPorMedicoYFecha(idMedico, fecha);
+	    
+	    // Si encuentra un turno con la misma  hora, devolvuelve true, de lo contrario, false.
+	    for (Turno turno: turnosExistentes) {
+	    	if (turno.getHoraInicio().equals(horaInicio)){
+	    		return true;
+	    	}
+	    }
+	    return false;
 	}
 	
 	public List<Turno> turnosdisponibles(LocalDate dt, Medico med){

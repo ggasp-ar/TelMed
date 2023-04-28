@@ -21,4 +21,11 @@ public class ControladorExcepcion {
         redirectAttr.addFlashAttribute("tipo","danger");
         return "redirect:/paciente/historial-turnos";
     }
+    
+    @ExceptionHandler(CloneNotSupportedException.class)
+    public String excepcion(CloneNotSupportedException cl, RedirectAttributes redirectAttr) {
+        redirectAttr.addFlashAttribute("mensaje", cl.getMessage());
+        redirectAttr.addFlashAttribute("tipo","danger");
+        return "redirect:/paciente/historial-turnos";
+    }
 }
