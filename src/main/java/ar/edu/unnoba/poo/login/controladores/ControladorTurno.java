@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import ar.edu.unnoba.poo.login.servicios.ServicioTurno;
 
@@ -18,8 +19,10 @@ public class ControladorTurno {
 	private ServicioTurno servicioTurno;
 	
 	@DeleteMapping("/{id}")
-	public String eliminar(@PathVariable("id") Long id, Model modelo) {
+	public String eliminar(@PathVariable("id") Long id, Model modelo, RedirectAttributes redAtt) throws Exception, IllegalArgumentException{
 		servicioTurno.eliminarTurno(id);
+		redAtt.addFlashAttribute("mensaje","El turno se canceló correctamente.");
+		redAtt.addFlashAttribute("tipo","success");
 		return "redirect:/paciente/historial-turnos";
 	}
 }
