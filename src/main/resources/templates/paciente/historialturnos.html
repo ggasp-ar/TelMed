@@ -15,7 +15,9 @@
     </div>
 
     <!--<p th:utext="'<strong>Rol: </strong> ' + ${paciente.dni}">Rol</p> -->
-
+	<div th:if="${mensaje != null}" th:class="'alert alert-'+${tipo}">
+        <span th:text="${mensaje}"></span>
+    </div>
     <div class="row" th:if="${(turnos != null) and (!turnos.empty)}">
       <div class="col-sm-5 col-md-9">
         <table class="table table-striped">

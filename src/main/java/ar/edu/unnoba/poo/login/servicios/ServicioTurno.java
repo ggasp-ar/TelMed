@@ -57,22 +57,26 @@ public class ServicioTurno {
 		repositorioTurno.save(turno);
 	}
 	
-	public void eliminarTurno(Long id) {
-		if(validaFechaPorIdTurno(id, LocalDateTime.now())) {
-			repositorioTurno.deleteById(id);
-		}else {
-			throw new RuntimeException("El turno tiene fecha de inicio menor a la fecha actual");
-		}
-	}
+	public void eliminarTurno(Long id) throws Exception {
+        if(validaFechaPorIdTurno(id, LocalDateTime.now())) {
+            try {
+                repositorioTurno.deleteById(id);
+            } catch(IllegalArgumentException e) {
+                throw new IllegalArgumentException("No fue posible eliminar el turno."); // Excepcion por si no encuentra el turno por el ID.
+            }
+        } else {
+            throw new Exception("No se puede eliminar un turno que ya finalizó o empezó."); // Excepcion para cuando quiere eliminar turno pasado a la fecha y hora actual
+        }
+    }
 	
+	// Valido que el turno sea uno con fecha y hora anterior a cuando se quiera eliminar.
 	public boolean validaFechaPorIdTurno(Long idTurno, LocalDateTime fechaActual) {
-		List<Turno> turnos = repositorioTurno.findAll();
-		for(Turno turno: turnos) {
-			if((turno.getId() == idTurno) && (turno.getHoraInicio().isAfter(fechaActual))) {
-				return true;
-			}
+		Turno turno = repositorioTurno.findById(idTurno).orElseThrow(()-> new NoSuchElementException("No se encontró turno con id: "+idTurno));
+		if(turno.getHoraInicio().isAfter(fechaActual)) {
+			return true;
+		}else {
+			return false;
 		}
-		return false;
 	}
 	
 	public List<Turno> turnosdisponibles(LocalDate dt, Medico med){
